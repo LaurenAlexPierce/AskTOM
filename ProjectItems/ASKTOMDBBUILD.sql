@@ -1,0 +1,35 @@
+
+CREATE TABLE priv(
+    priv_id NUMBER(6),
+    priv_name VARCHAR2(30),
+    CONSTRAINT priv_pk PRIMARY KEY (priv_id)
+);
+
+CREATE TABLE toms (
+    user_id NUMBER(6),
+    user_name VARCHAR2(100) UNIQUE,
+    tom_pass VARCHAR2(100),
+    priv_id NUMBER(6),
+    CONSTRAINT toms_pk PRIMARY KEY (user_id),
+    CONSTRAINT tom_priv_fk FOREIGN KEY (priv_id) REFERENCES priv (priv_id)
+);
+
+CREATE TABLE topics (
+    topic_id NUMBER(6),
+    topic_name VARCHAR2(30),
+    priv_id NUMBER(6),
+    CONSTRAINT topics_pk PRIMARY KEY (topic_id),
+    CONSTRAINT topics_priv_fk FOREIGN KEY (priv_id) REFERENCES priv (priv_id)
+);
+
+CREATE TABLE responses (
+    response_id NUMBER(6),
+    text_content VARCHAR2(3500),
+    votes NUMBER(6),
+    topic_id NUMBER(6),
+    user_id NUMBER(6), 
+    CONSTRAINT responses_pk PRIMARY KEY (response_id),
+    CONSTRAINT responses_topic_fk FOREIGN KEY (topic_id) REFERENCES topics (topic_id),
+    CONSTRAINT responses_user_fk FOREIGN KEY (user_id) REFERENCES toms (user_id)
+    );
+    
