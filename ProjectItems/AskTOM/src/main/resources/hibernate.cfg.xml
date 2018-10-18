@@ -40,6 +40,7 @@
 	<mapping class="com.revature.beans.Privilege"/>
 	<mapping class="com.revature.beans.Tom"/>
 	<mapping class="com.revature.beans.Response"/>
+	<mapping class="com.revature.beans.Topic"/>
 
 	</session-factory>
 
