@@ -14,15 +14,15 @@
 		</property>
 
 		<property name="hibernate.connection.url">
-			<!--  jdbc:oracle:thin:@localhost:1521:xe-->
+			jdbc:oracle:thin:@localhost:1521:xe
 		</property>
 
 		<property name="hibernate.connection.username">
-			<!--local_180910-->
+			ErikM
 		</property>
 
 		<property name="hibernate.connection.password">
-			<!--admin-->
+			admin
 		</property>
 
 		<property name="hibernate.connection.pool_size">
