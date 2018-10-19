@@ -1,0 +1,9 @@
+.rsection{
+	background: #808080;
+	color: #fbf0ff;
+	
+	border-radius: 15px;
+	border: 5px outset #800080;
+	margin: 10px;
+	padding: 10px;
+}
