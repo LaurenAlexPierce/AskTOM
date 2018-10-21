@@ -22,7 +22,7 @@
 		</property>
 
 		<property name="hibernate.connection.password">
-			WeGottaAskTom
+			WeGottaAskTOM
 		</property>
 
 		<property name="hibernate.connection.pool_size">
