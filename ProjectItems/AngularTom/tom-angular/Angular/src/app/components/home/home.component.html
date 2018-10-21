@@ -2,6 +2,6 @@
 <p>
   home-work(s)!
 </p>
-<div *ngFor="let topic in topics">
-  <app-topic-list></app-topic-list>
+<div *ngFor="let topic of topics">
+  <app-topic-list>{{topic.name}}</app-topic-list>
 </div>
