@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders} from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import { Tom } from '../components/tom/tom';
 
 @Injectable({
@@ -13,8 +13,19 @@ export class TomService {
     headers: new HttpHeaders({ 'Content-Type': 'application/json'})
   }
 
-  getTom(){
-    return this.http.get<Tom>("http://");
+  
+  getTom(username:string, password:string){
+    let body = new HttpParams();
+    let headers = new HttpHeaders().set(
+      'Content-Type', 'application/x-www-form-urlencoded'
+    );
+
+      body = body.set('username', username);
+      body = body.set('password', password);
+
+    return this.http.post<Tom>("http://18.191.49.49:8080/AskTOM/LoginServlet",
+    body,
+    {headers:headers});
   }
 
 }
