@@ -1,11 +1,31 @@
 package com.revature.beans;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="topics")
 public class Topic {
-	
+
+	@Id
+	@Column(name="topic_id")
+	@SequenceGenerator(sequenceName="topic_seq", name="topic_seq")
+	@GeneratedValue(generator="topic_seq", strategy=GenerationType.SEQUENCE)
 	Integer id;
-	String name;
-	Integer privId;
 	
+	@Column(name="topic_name")
+	String name;
+	
+	@OneToOne
+	@JoinColumn(name="priv_id")
+	Integer privId;
 	
 	
 	public Topic() {

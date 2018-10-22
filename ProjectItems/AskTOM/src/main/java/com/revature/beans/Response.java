@@ -1,10 +1,37 @@
 package com.revature.beans;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="responses")
 public class Response {
+	
+	@Id
+	@Column(name="response_id")
+	@SequenceGenerator(sequenceName="resp_seq", name="resp_seq")
+	@GeneratedValue(generator="resp_seq", strategy=GenerationType.SEQUENCE)
 	Integer id;
+	
+	@Column(name="text_content")
 	String content;
+	
+	@Column(name="votes")
 	Integer votes;
+	
+	@ManyToOne
+	@JoinColumn(name="topic_id")
 	Integer topicId;
+	
+	@ManyToOne
+	@JoinColumn(name="user_id")
 	Integer userId;
 	
 	
