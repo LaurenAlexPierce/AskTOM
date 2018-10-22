@@ -39,7 +39,7 @@ public class TomDaoImpl implements TomDao {
 		Session session = HibernateUtil.getSession();
 		
 		try {
-			tl = session.createQuery("FROM toms").list();
+			tl = session.createQuery("FROM Tom").list();
 		} catch (HibernateException he) {
 			he.printStackTrace();
 		} finally {

@@ -42,7 +42,7 @@ public class PrivilegeDaoImpl implements PrivilegeDao {
 		Session session = HibernateUtil.getSession();
 		
 		try {
-			lp = session.createQuery("FROM priv").list();
+			lp = session.createQuery("FROM Privilege").list();
 		} catch (HibernateException he)
 		{
 			he.printStackTrace();
