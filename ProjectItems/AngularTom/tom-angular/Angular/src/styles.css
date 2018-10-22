@@ -1,2 +1,97 @@
 /* You can add global styles to this file, and also import other style files */
 body { padding-top: 70px; }
+html {
+    font-size: 100%;
+  }
+  
+  body{
+    font-size:0.75em;
+    background-color: lightgray;
+  }
+  button {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: inline-block;
+    border-radius: 0.25em;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 1.25em;
+    transition: all 0.5s;
+    cursor: pointer;
+    opacity: 0.6;
+    display: inline-block;
+    width: 100%;
+  }
+  
+  /*Buttons with spans */
+  button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -3vw;
+    transition: 0.5s;
+  }
+  
+  button:hover {opacity: 1}
+  
+  button:hover span {
+    padding-right: 4vw;
+  }
+  
+  button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  
+  .btn-success {
+    background-color: darkblue;
+  }
+  
+  .btn-success{
+    text-align: center;
+  }
+  
+  .fixed-bottom{
+    background-color: darkgray;
+  }
+  
+  .nav-link{
+    transition: all 300ms;
+    background-color: #444444;
+  }
+  
+  .nav-link:hover {
+    color: #9999DD;
+    background-color: #555555;
+    opacity: .9;
+    right: 0;
+  }
+  .nav-link .active{
+    opacity: 1;
+    background-color: darkblue;
+  }
+  
+  .container-fluid{
+      padding-top:75px;
+      padding-bottom:50px;
+  }
+  
+  hr{ 
+    
+      border:         none;
+      border-right:    1px solid hsla(200, 10%, 50%,100);
+      height:         100vh;
+      width:          1px;       
+  }
