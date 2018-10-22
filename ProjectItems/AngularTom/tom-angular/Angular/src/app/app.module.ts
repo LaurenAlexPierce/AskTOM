@@ -1,3 +1,4 @@
+import { ResponseComponent } from './components/response/response.component';
 import { HomeComponent } from './components/home/home.component';
 import { appRoutes } from './routes';
 import { BrowserModule } from 'node_modules/@angular/platform-browser';
@@ -15,6 +16,7 @@ import { TopicListComponent } from './components/topic-list/topic-list.component
     AppComponent,
     LoginComponent,
     HomeComponent,
+    ResponseComponent,
     TopicListComponent,
     NavbarComponent
   ],
