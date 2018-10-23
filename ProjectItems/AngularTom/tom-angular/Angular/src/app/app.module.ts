@@ -10,6 +10,7 @@ import { FormsModule } from 'node_modules/@angular/forms';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { RouterModule } from '@angular/router';
 import { TopicListComponent } from './components/topic-list/topic-list.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { TopicListComponent } from './components/topic-list/topic-list.component
     HomeComponent,
     ResponseComponent,
     TopicListComponent,
+    RegisterComponent,
     NavbarComponent
   ],
   imports: [

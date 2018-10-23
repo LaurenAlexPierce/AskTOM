@@ -1,3 +1,65 @@
-<p>
-  register works!
-</p>
+<div class="container-fluid">
+  <div class="d-flex justify-content-center">
+    <h1>Please Register</h1>
+  </div>
+  <form method=POST action="register.do">
+      <!-- Staff Name -->
+      <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+          <div class="form-group">
+              First Name:<input type="text" class="form-control" name="fname"
+                  required>
+          </div>
+        </div>
+        <div class="col-3"></div>
+      </div>
+      <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+          <div class="form-group">
+              Last Name:<input type="text" class="form-control" name="lname"
+                  required>
+          </div>
+        </div>
+        <div class="col-3"></div>
+      </div>
+      <!-- Password -->
+      <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+          <div class="form-group">
+              Password:<input type="password" class="form-control"
+                  name="password" required>
+          </div>
+        </div>
+        <div class="col-3"></div>
+      </div>
+      <!-- Confirm Password -->
+      <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+          <div class="form-group">
+              Password:<input type="password" class="form-control"
+                  name="password-confirm" required>
+          </div>
+        </div>
+        <div class="col-3"></div>
+      </div>
+      <br>
+      <br>
+      <!-- for a single button in the middle of a row -->
+      <div class="row">
+          <div class="col-4">
+          </div>
+          <div class="col-4">
+            <button class="btn-block btn-primary text-center"><span>REGISTER</span></button>
+          </div>
+          <div class="col-4">
+            <button class="btn-block btn-default" href="index.html"><span>BACK</span></button>
+        </div>
+        </div>
+      <br>
+      <br>
+  </form>
+</div>
