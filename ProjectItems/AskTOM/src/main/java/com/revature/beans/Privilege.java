@@ -16,10 +16,10 @@ public class Privilege {
 		@Column(name="priv_id")
 		@SequenceGenerator(sequenceName="priv_seq", name="priv_seq")
 		@GeneratedValue(generator="priv_seq", strategy=GenerationType.SEQUENCE)
-		Integer id;
+		private Integer id;
 		
 		@Column(name="priv_name")
-		String name;
+		private String name;
 		
 		public Integer getId() {
 			return id;
