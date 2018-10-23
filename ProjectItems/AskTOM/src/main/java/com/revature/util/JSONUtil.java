@@ -10,6 +10,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  *
  */
 public class JSONUtil {
+	private static LoggingUtil log = new LoggingUtil();
+	
 	private static ObjectMapper objectMapper;
 	
 	/**
