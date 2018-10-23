@@ -8,8 +8,8 @@
         <div class="col-3"></div>
         <div class="col-6">
           <div class="form-group">
-              First Name:<input type="text" class="form-control" name="fname"
-                  required>
+              Username:<input type="text" class="form-control" 
+              [(ngModel)]=newTom.username required>
           </div>
         </div>
         <div class="col-3"></div>
@@ -20,7 +20,7 @@
         <div class="col-6">
           <div class="form-group">
               Password:<input type="password" class="form-control"
-                  name="password" required>
+                  [(ngModel)]=newTom.password required>
           </div>
         </div>
         <div class="col-3"></div>
@@ -30,8 +30,8 @@
         <div class="col-3"></div>
         <div class="col-6">
           <div class="form-group">
-              Password:<input type="password" class="form-control"
-                  name="password-confirm" required>
+              Confirm Password:<input type="password" class="form-control"
+                  [(ngModel)]=password-confirm required>
           </div>
         </div>
         <div class="col-3"></div>
