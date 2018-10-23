@@ -12,18 +12,17 @@ import com.revature.daos.PrivilegeDaoImpl;
 public class PrivilegeDao_Test {
 	
 static PrivilegeDaoImpl pd = new PrivilegeDaoImpl();
-	
+static Privilege p = new Privilege();
   @BeforeClass
   public void beforeClass() {
-	  Privilege p = new Privilege();
-	  p.setId(3);
 	  p.setName("test");
-	  pd.insertPrivilege(p);
+	  p.setId(pd.insertPrivilege(p));
+	
   }
 
   @AfterClass
   public void afterClass() {
-	  pd.removePrivilege(3);
+	  pd.removePrivilege(p.getId());
   }
   
   @BeforeTest
