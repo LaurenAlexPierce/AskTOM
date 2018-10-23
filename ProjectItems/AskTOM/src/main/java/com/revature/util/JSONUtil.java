@@ -18,13 +18,8 @@ public class JSONUtil {
 	 * Returns a singleton instance of an ObjectMapper from Jackson Core package
 	 * @return <code> ObjectMapper </code>
 	 */
-	public static ObjectMapper getMapper() {
-		if (objectMapper == null)
-			objectMapper = new ObjectMapper();
-		else
-			return objectMapper;
-		
-		return objectMapper;
+	static {
+		objectMapper = new ObjectMapper();
 	}
 	
 	/**
