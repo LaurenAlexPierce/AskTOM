@@ -1,5 +1,6 @@
 package com.revature.tests;
 
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
@@ -15,14 +16,13 @@ static PrivilegeDaoImpl pd = new PrivilegeDaoImpl();
 static Privilege p = new Privilege();
   @BeforeClass
   public void beforeClass() {
-	  p.setName("test");
-	  p.setId(pd.insertPrivilege(p));
+
 	
   }
 
   @AfterClass
   public void afterClass() {
-	  pd.removePrivilege(p.getId());
+	  
   }
   
   @BeforeTest
@@ -30,7 +30,12 @@ static Privilege p = new Privilege();
   }
 
   @Test
-  public void f() {
+  public void selectPrivilegeByIdTest() {
+	p = pd.selectPrivilegeById(1);
+	String testName = p.getName();
+	
+	Assert.assertEquals(testName,"admin");
+	
   }
 
   @AfterTest
