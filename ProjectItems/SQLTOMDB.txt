@@ -21,7 +21,7 @@ CREATE TABLE toms (
 CREATE TABLE topics (
     topic_id NUMBER(6),
     topic_name VARCHAR2(30),
-    priv_id NUMBER(6) UNIQUE,
+    priv_id NUMBER(6),
     CONSTRAINT topics_pk PRIMARY KEY (topic_id),
     CONSTRAINT topics_priv_fk FOREIGN KEY (priv_id) REFERENCES priv (priv_id)
 );
