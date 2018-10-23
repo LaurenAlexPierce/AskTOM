@@ -1,6 +1,8 @@
+import { NavbarComponent } from './../navbar/navbar.component';
 import { Topic } from './topic/topic';
 import { TomService } from './../../services/tom.service';
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-home',
@@ -11,10 +13,10 @@ export class HomeComponent implements OnInit {
 
   topics:Topic[] = [];
 
-  constructor(private TomService:TomService) { }
+  constructor(/*private TomService:TomService*/) { }
 
   ngOnInit() {
-    this.TomService
+   /* this.TomService
       .getTopics()
       .subscribe(
         data => {
@@ -24,6 +26,7 @@ export class HomeComponent implements OnInit {
           console.log(error.message);
         }
       );
+      */
   }
 
 }

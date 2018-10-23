@@ -1,3 +1,4 @@
+import { TomService } from './services/tom.service';
 import { ResponseComponent } from './components/response/response.component';
 import { HomeComponent } from './components/home/home.component';
 import { appRoutes } from './routes';
@@ -27,7 +28,7 @@ import { RegisterComponent } from './components/register/register.component';
     FormsModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [TomService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

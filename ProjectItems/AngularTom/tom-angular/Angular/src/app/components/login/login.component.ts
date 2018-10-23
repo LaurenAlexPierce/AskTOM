@@ -1,3 +1,4 @@
+import { NavbarComponent } from './../navbar/navbar.component';
 import { Component, OnInit } from '@angular/core';
 import { Tom } from '../tom/tom';
 
