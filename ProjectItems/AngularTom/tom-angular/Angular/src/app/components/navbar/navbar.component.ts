@@ -1,4 +1,5 @@
-import { Component, OnInit } from 'node_modules/@angular/core';
+import { Component, OnInit, Input } from 'node_modules/@angular/core';
+import { Option } from '../option/option';
 
 @Component({
   selector: 'app-navbar',
@@ -7,6 +8,10 @@ import { Component, OnInit } from 'node_modules/@angular/core';
 })
 
 export class NavbarComponent implements OnInit {
+
+  @Input() option:Option;
+
+  @Input() options:Option[]=[];
 
   constructor() { }
 
