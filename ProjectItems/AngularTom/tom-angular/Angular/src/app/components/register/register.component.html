@@ -3,15 +3,12 @@
   <div class="d-flex justify-content-center">
     <h1>Please Register</h1>
   </div>
-  <form method=POST action="register.do">
       <!-- Userame -->
       <div class="row">
         <div class="col-3"></div>
         <div class="col-6">
-          <div class="form-group">
-              Username:<input type="text" class="form-control" 
+              Username:<input type="text" id="register-username"
               [(ngModel)]=newTom.username required>
-          </div>
         </div>
         <div class="col-3"></div>
       </div>
@@ -19,10 +16,9 @@
       <div class="row">
         <div class="col-3"></div>
         <div class="col-6">
-          <div class="form-group">
-              Password:<input type="password" class="form-control"
-                  [(ngModel)]=newTom.password required>
-          </div>
+          Password:<input type="password" 
+                 id="register-password"
+                [(ngModel)]=newTom.password required>
         </div>
         <div class="col-3"></div>
       </div>
@@ -30,28 +26,24 @@
       <div class="row">
         <div class="col-3"></div>
         <div class="col-6">
-          <div class="form-group">
-              Confirm Password:<input type="password" class="form-control"
+              Confirm Password:
+              <input type="password" 
+                  id="register-password-confirm"
                   [(ngModel)]=password-confirm required>
-          </div>
         </div>
         <div class="col-3"></div>
       </div>
       <br>
       <br>
-
-      <br>
-      <br>
-        <!-- for a single button in the middle of a row -->
-    <div class="row">
-      <div class="col-4">
-      </div>
-      <div class="col-4">
-        <button class="btn-primary text-center"><span><a routerLink="/login" routerLinkActive="active">Confirm</a></span></button>
-      </div>
-      <div class="col-4">
-        <button class="btn-default" ><span><a routerLink="/login" routerLinkActive="active">Cancel</a></span></button>
-      </div>
+  <!-- for a single button in the middle of a row -->
+  <div class="row">
+    <div class="col-4">
     </div>
-  </form>
+    <div class="col-4">
+      <button class="btn-primary text-center"><span><a routerLink="/login" routerLinkActive="active">Confirm</a></span></button>
+    </div>
+    <div class="col-4">
+      <button class="btn-default" ><span><a routerLink="/login" routerLinkActive="active">Cancel</a></span></button>
+    </div>
+  </div>
 </div>
