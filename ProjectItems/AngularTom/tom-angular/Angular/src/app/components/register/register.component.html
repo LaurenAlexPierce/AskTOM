@@ -7,7 +7,9 @@
       <div class="row">
         <div class="col-3"></div>
         <div class="col-6">
-              Username:<input type="text" id="register-username"
+              Username:<input type="text" 
+              class="form-control"
+              id="register-username"
               [(ngModel)]=newTom.username required>
         </div>
         <div class="col-3"></div>
@@ -16,8 +18,9 @@
       <div class="row">
         <div class="col-3"></div>
         <div class="col-6">
-          Password:<input type="password" 
-                 id="register-password"
+          Password:<input type="password"
+                class="form-control" 
+                id="register-password"
                 [(ngModel)]=newTom.password required>
         </div>
         <div class="col-3"></div>
@@ -28,8 +31,34 @@
         <div class="col-6">
               Confirm Password:
               <input type="password" 
+                  class="form-control"
                   id="register-password-confirm"
                   [(ngModel)]=password-confirm required>
+        </div>
+        <div class="col-3"></div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+          <div class="dropdown show">
+            <a class="btn btn-secondary dropdown-toggle form-control" 
+              role="button" 
+              id="dropdownMenuLink" 
+              data-toggle="dropdown" 
+              aria-haspopup="true" 
+              aria-expanded="false"
+              (click)="toggleMenu()"
+              required>
+              Privilege
+            </a>
+          
+            <div class="dropdown-menu" 
+              aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" >Admin</a>
+              <a class="dropdown-item" >User</a>
+            </div>
+          </div>
         </div>
         <div class="col-3"></div>
       </div>
@@ -40,10 +69,14 @@
     <div class="col-4">
     </div>
     <div class="col-4">
-      <button class="btn-primary text-center"><span><a routerLink="/login" routerLinkActive="active">Confirm</a></span></button>
+      <nav><a routerLink="/login" routerLinkActive="active">
+      <button class="btn-primary text-center"><span>Confirm</span></button>
+      </a></nav>
     </div>
     <div class="col-4">
-      <button class="btn-default" ><span><a routerLink="/login" routerLinkActive="active">Cancel</a></span></button>
+      <nav><a routerLink="/login" routerLinkActive="active">
+      <button class="btn-default" ><span>Cancel</span></button>
+      </a></nav>
     </div>
   </div>
 </div>

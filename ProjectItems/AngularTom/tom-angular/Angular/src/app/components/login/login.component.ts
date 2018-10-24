@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  newTom:Tom = new Tom("","");
+  newTom:Tom = new Tom("","",2);
 
   option:Option={name:"true"};
   options:Option[]=[
@@ -21,7 +21,8 @@ export class LoginComponent implements OnInit {
   addTom(){
     new Tom(
       this.newTom.username,
-      this.newTom.password
+      this.newTom.password,
+      this.newTom.privId
     )
   }
 

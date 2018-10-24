@@ -18,7 +18,7 @@ export class TomService {
     return this.http.get<Topic[]>("http://localhost:8085/AskTOM/GetTopics");
   }
   
-  getTom(username:string, password:string){
+  getTom(username:string, password:string, privId:number){
     let body = new HttpParams();
     /* Point to tomcat server */
     let headers = new HttpHeaders().set(
@@ -27,6 +27,7 @@ export class TomService {
 
       body = body.set('username', username);
       body = body.set('password', password);
+      body = body.set('privId', privId.toString());
       /* Point to tomcat server */
     return this.http.post<Tom>("http://loaclhost:8085/AskTOM/LoginServlet",
     body,

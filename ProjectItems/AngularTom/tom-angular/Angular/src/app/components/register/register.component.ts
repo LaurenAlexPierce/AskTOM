@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
   
-  newTom:Tom = new Tom("","");
+  newTom:Tom = new Tom("","",0);
 
   constructor() { }
 
@@ -19,7 +19,8 @@ export class RegisterComponent implements OnInit {
   addTom(){
     new Tom(
       this.newTom.username,
-      this.newTom.password
+      this.newTom.password,
+      this.newTom.privId
     )
   }
 }
