@@ -18,46 +18,60 @@ public class Topic {
 	@Column(name="topic_id")
 	@SequenceGenerator(sequenceName="topic_seq", name="topic_seq")
 	@GeneratedValue(generator="topic_seq", strategy=GenerationType.SEQUENCE)
-	Integer id;
+	private Integer id;
 	
 	@Column(name="topic_name")
-	String name;
+	private String name;
 	
 	@OneToOne
 	@JoinColumn(name="priv_id")
-	Integer privId;
-	
-	
-	public Topic() {
-		super();
-	}
-	public Topic(Integer id, String name, Integer privId) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.privId = privId;
-	}
+	private Privilege privId;
+
 	public Integer getId() {
 		return id;
 	}
+
 	public void setId(Integer id) {
 		this.id = id;
 	}
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
-	public Integer getPrivId() {
+
+	public Privilege getPrivId() {
 		return privId;
 	}
-	public void setPrivId(Integer privId) {
+
+	public void setPrivId(Privilege privId) {
 		this.privId = privId;
 	}
+
 	@Override
 	public String toString() {
 		return "Topic [id=" + id + ", name=" + name + ", privId=" + privId + "]";
+	}
+
+	public Topic(Integer id, String name, Privilege privId) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.privId = privId;
+	}
+
+	public Topic(String name, Privilege privId) {
+		super();
+		this.name = name;
+		this.privId = privId;
+	}
+
+	public Topic() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 	
 	

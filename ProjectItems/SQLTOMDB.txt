@@ -1,3 +1,7 @@
+DROP TABLE priv CASCADE CONSTRAINTS;
+DROP TABLE toms CASCADE CONSTRAINTS;
+DROP TABLE topics CASCADE CONSTRAINTS;
+DROP TABLE responses CASCADE CONSTRAINTS;
 
 CREATE TABLE priv(
     priv_id NUMBER(6),
@@ -9,7 +13,7 @@ CREATE TABLE toms (
     user_id NUMBER(6),
     user_name VARCHAR2(100) UNIQUE,
     tom_pass VARCHAR2(100),
-    priv_id NUMBER(6),
+    priv_id NUMBER(6) UNIQUE,
     CONSTRAINT toms_pk PRIMARY KEY (user_id),
     CONSTRAINT tom_priv_fk FOREIGN KEY (priv_id) REFERENCES priv (priv_id)
 );
@@ -32,4 +36,3 @@ CREATE TABLE responses (
     CONSTRAINT responses_topic_fk FOREIGN KEY (topic_id) REFERENCES topics (topic_id),
     CONSTRAINT responses_user_fk FOREIGN KEY (user_id) REFERENCES toms (user_id)
     );
-    

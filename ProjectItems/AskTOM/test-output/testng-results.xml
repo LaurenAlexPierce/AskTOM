@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="39755" started-at="2018-10-23T20:45:29Z" finished-at="2018-10-23T20:46:09Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="39755" started-at="2018-10-23T20:45:29Z" finished-at="2018-10-23T20:46:09Z">
+      <class name="com.revature.tests.PrivilegeDao_Test">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.revature.tests.PrivilegeDao_Test@1060b431]" name="beforeTest" is-config="true" duration-ms="10" started-at="2018-10-23T20:45:29Z" finished-at="2018-10-23T20:45:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.revature.tests.PrivilegeDao_Test@1060b431]" name="beforeClass" is-config="true" duration-ms="1" started-at="2018-10-23T20:45:29Z" finished-at="2018-10-23T20:45:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="selectPrivilegeByIdTest()[pri:0, instance:com.revature.tests.PrivilegeDao_Test@1060b431]" name="selectPrivilegeByIdTest" duration-ms="39721" started-at="2018-10-23T20:45:29Z" finished-at="2018-10-23T20:46:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectPrivilegeByIdTest -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.revature.tests.PrivilegeDao_Test@1060b431]" name="afterClass" is-config="true" duration-ms="1" started-at="2018-10-23T20:46:09Z" finished-at="2018-10-23T20:46:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.revature.tests.PrivilegeDao_Test@1060b431]" name="afterTest" is-config="true" duration-ms="1" started-at="2018-10-23T20:46:09Z" finished-at="2018-10-23T20:46:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.revature.tests.PrivilegeDao_Test -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

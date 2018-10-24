@@ -39,7 +39,7 @@ public class TomDaoImpl implements TomDao {
 		Session session = HibernateUtil.getSession();
 		
 		try {
-			tl = session.createQuery("FROM toms").list();
+			tl = session.createQuery("FROM Tom").list();
 		} catch (HibernateException he) {
 			he.printStackTrace();
 		} finally {
@@ -48,6 +48,23 @@ public class TomDaoImpl implements TomDao {
 		return tl;
 	}
 
+	//selects a specific tom by user name; returns the tom object
+	@Override
+	public Tom selectTomByUsername(String username) {
+		
+		Session session = HibernateUtil.getSession();
+		Tom t = null;
+		
+		try {
+			t = (Tom)session.get(Tom.class, username);
+		} catch (HibernateException he) {
+			he.printStackTrace();
+		} finally {
+			session.close();
+		}
+		return t;
+	}
+	
 	//selects a specific tom by id; returns the tom object
 	@Override
 	public Tom selectTomById(Integer id) {
@@ -108,5 +125,6 @@ public class TomDaoImpl implements TomDao {
 		}
 
 	}
+
 
 }
