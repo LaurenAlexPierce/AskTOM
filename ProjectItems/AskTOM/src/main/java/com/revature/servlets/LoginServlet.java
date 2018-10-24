@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.log4j.Logger;
+
 import com.revature.beans.Tom;
 import com.revature.daos.TomDao;
 import com.revature.daos.TomDaoImpl;
@@ -17,6 +19,8 @@ import com.revature.util.JSONUtil;
  */
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
+	Logger log = Logger.getRootLogger();
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -43,18 +47,26 @@ public class LoginServlet extends HttpServlet {
 		user = userDao.selectTomByUsername(inputUsername);
 		
 		if (user == null) {
-			// ASSERT: User not found
+			// ASSERT: User not found,
+			// 			empty response document returned to Web Container
+			log.info("No user found in database. Returned an empty response document to Web Container.\n"
+					+ "Username posted: " + inputUsername );
 		} else if (!user.getPassword().equals(inputPassword)) {
 			// ASSERT: User found, but passwords do NOT match
+			//			so an empty response document of type "application/json" is returned to Web Container
+			log.info("Password for username does not match. Returned an empty response document to Web Container.\n"
+					+ " Username posted: " + inputUsername );
 			
 		} else {
-			// ASSERT: User found, and passwords match
+			// ASSERT: User found, and passwords match, so return response with string representation of JSON
+			// 			object
+			String jsonString = JSONUtil.convertJavaToJSON(user);
+			response.getWriter().write(jsonString);
+			log.info("User found and password matches. User record returned in JSON format./n"
+					+ "Username: " + user.getUsername() + "Privledge Id: " + user.getPrivId());
 		}
-		response.getWriter().write(JSONUtil.convertJavaToJSON(user));
 		
-		
-		
-
+		// ASSERT: request and response documents sent back to Web Container (then client)
 	}
 
 }
