@@ -13,10 +13,10 @@ export class HomeComponent implements OnInit {
 
   topics:Topic[] = [];
 
-  constructor(/*private TomService:TomService*/) { }
+  constructor(/*private tomService:TomService*/) { }
 
   ngOnInit() {
-   /* this.TomService
+   /* this.tomService
       .getTopics()
       .subscribe(
         data => {
