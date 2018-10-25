@@ -39,4 +39,24 @@
     <servlet-name>RegisterServlet</servlet-name>
     <url-pattern>/RegisterServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>GetAllResponsesForTopicServlet</display-name>
+    <servlet-name>GetAllResponsesForTopicServlet</servlet-name>
+    <servlet-class>com.revature.servlets.GetAllResponsesForTopicServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetAllResponsesForTopicServlet</servlet-name>
+    <url-pattern>/GetAllResponsesForTopicServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>InsertResponseServlet</display-name>
+    <servlet-name>InsertResponseServlet</servlet-name>
+    <servlet-class>com.revature.servlets.InsertResponseServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InsertResponseServlet</servlet-name>
+    <url-pattern>/InsertResponseServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

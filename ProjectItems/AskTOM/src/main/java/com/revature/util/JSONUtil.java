@@ -1,9 +1,7 @@
 package com.revature.util;
 
-import java.io.IOException;
 
 import org.apache.log4j.Logger;
-
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 /**
@@ -36,9 +34,6 @@ public class JSONUtil {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			log.warn("EXCEPTION: JsonProcessingException when attempting to write Object as a String");
-		} catch (IOException e) {
-			e.printStackTrace();
-			log.warn("EXCEPTION: IOException when attempting to write Object as a String");
 		}
 	
 		return jsonString;
