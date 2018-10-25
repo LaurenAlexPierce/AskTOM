@@ -1,6 +1,5 @@
-export class Option{
+export class DropdownMenu{
     constructor(
-        public id:number,
         public name:string
     ){}
 }

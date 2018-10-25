@@ -13,9 +13,9 @@ export class LoginComponent implements OnInit {
 
   newTom:Tom = new Tom("","",2);
 
-  option:Option={name:"true"};
+  option:Option={id:1,name:"true"};
   options:Option[]=[
-    {name: "Info"}
+    {id:1, name: "Info"}
   ];
 
   addTom(){
