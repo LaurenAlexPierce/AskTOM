@@ -16,25 +16,40 @@ public class ResponseDaoImpl implements ResponseDao {
 		Session session = HibernateUtil.getSession();
 		Transaction tx = null;
 		Integer id = null;
-		
+
 		try {
 			tx = session.beginTransaction();
-			id = (Integer)session.save(r);
+			id = (Integer) session.save(r);
 			tx.commit();
-		}catch (HibernateException he) {
+		} catch (HibernateException he) {
 			he.printStackTrace();
 			tx.rollback();
-		}finally {
+		} finally {
 			session.close();
 		}
 		return id;
 	}
 
 	@Override
+	public List<Response> getAllResponseByTopic(Integer id) {
+		List<Response> lr = null;
+		Session session = HibernateUtil.getSession();
+
+		try {
+			lr = session.createQuery("FROM Response R WHERE R.topicId =" + id).list();
+		} catch (HibernateException he) {
+			he.printStackTrace();
+		} finally {
+			session.close();
+		}
+		return lr;
+	}
+
+	@Override
 	public List<Response> getAllResponse() {
 		List<Response> lr = null;
 		Session session = HibernateUtil.getSession();
-		
+
 		try {
 			lr = session.createQuery("FROM Response").list();
 		} catch (HibernateException he) {
@@ -49,12 +64,12 @@ public class ResponseDaoImpl implements ResponseDao {
 	public Response selectResponseById(Integer id) {
 		Session session = HibernateUtil.getSession();
 		Response r = null;
-		
+
 		try {
-			r = (Response)session.get(Response.class, id);
-		}catch (HibernateException he) {
+			r = (Response) session.get(Response.class, id);
+		} catch (HibernateException he) {
 			he.printStackTrace();
-		}finally {
+		} finally {
 			session.close();
 		}
 		return r;
@@ -65,21 +80,21 @@ public class ResponseDaoImpl implements ResponseDao {
 		Response response = null;
 		Session session = HibernateUtil.getSession();
 		Transaction tx = null;
-		
+
 		try {
 			tx = session.beginTransaction();
-			response = (Response)session.get(Response.class, r.getId());
-			
+			response = (Response) session.get(Response.class, r.getId());
+
 			response.setContent(r.getContent());
 			response.setVotes(r.getVotes());
 			response.setTopicId(r.getTopicId());
 			response.setUserId(r.getUserId());
-			
+
 			session.save(response);
 			tx.commit();
-		}catch (HibernateException he) {
+		} catch (HibernateException he) {
 			he.printStackTrace();
-		}finally {
+		} finally {
 			session.close();
 		}
 		return response;
@@ -89,16 +104,17 @@ public class ResponseDaoImpl implements ResponseDao {
 	public void removeResponse(Integer id) {
 		Session session = HibernateUtil.getSession();
 		Transaction tx = null;
-		
+
 		try {
 			tx = session.beginTransaction();
 			session.delete(session.get(Response.class, id));
 			tx.commit();
-		}catch (HibernateException he) {
+		} catch (HibernateException he) {
 			he.printStackTrace();
 			tx.rollback();
-		}finally {
+		} finally {
 			session.close();
 		}
 	}
+
 }
