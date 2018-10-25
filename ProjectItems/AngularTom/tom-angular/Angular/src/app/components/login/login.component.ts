@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Tom } from '../tom/tom';
 import { Option } from '../option/option';
 import { Router } from '@angular/router';
+import { TomService } from 'src/app/services/tom.service';
 
 @Component({
   selector: 'app-login',
@@ -24,9 +25,28 @@ export class LoginComponent implements OnInit {
       this.newTom.password,
       this.newTom.privId
     )
+    
+    this.loginTom.getTom(
+      this.newTom.username,
+      this.newTom.password
+    ).subscribe(
+      data => {
+        /**
+         * Pass result to 
+         */
+        if(data != null){
+          this.router.navigateByUrl('/home');
+        }
+      },
+      error => {
+
+      }
+    );
+
   }
 
-  constructor() { }
+  constructor(private loginTom:TomService,
+    private router:Router) { }
 
   ngOnInit() {
     this.option;
