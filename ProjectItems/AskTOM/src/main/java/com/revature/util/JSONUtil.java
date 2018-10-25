@@ -19,7 +19,7 @@ public class JSONUtil {
 	
 	/**
 	 * Returns <code> String </code> representation of a Java object that is
-	 * meant to be written to a JSON file, likely in a HttpResponse document (Content Type: applicaiton/json)
+	 * meant to be written to a JSON file, likely in an HttpResponse document (Content Type: applicaiton/json)
 	 * @param obj a Java <code> Object </code> instance
 	 * @return <code> String </code> representation of object, or <br />
 	 * 			<code> null </code> if object parameter is indeed null
