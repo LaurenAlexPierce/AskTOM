@@ -1,36 +1,26 @@
 package com.revature.util;
 
-import java.io.IOException;
 
+import org.apache.log4j.Logger;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 /**
  * Utility class that uses Jackson to convert a Java <code> Object </code> into
- * its JSON string representation (and vice-versa).
+ * its JSON string representation.
  *
  */
 public class JSONUtil {
-	private static LoggingUtil log = new LoggingUtil();
+	private static Logger log = Logger.getRootLogger();
 	
 	private static ObjectMapper objectMapper;
-	
-	/**
-	 * Returns a singleton instance of an ObjectMapper from Jackson Core package
-	 * @return <code> ObjectMapper </code>
-	 */
-	public static ObjectMapper getMapper() {
-		if (objectMapper == null)
-			objectMapper = new ObjectMapper();
-		else
-			return objectMapper;
-		
-		return objectMapper;
+	static {
+		objectMapper = new ObjectMapper();
 	}
 	
 	/**
 	 * Returns <code> String </code> representation of a Java object that is
-	 * meant to be written to a JSON file, likely in a HttpResponse document (Content Type: applicaiton/json)
-	 * @param obj
+	 * meant to be written to a JSON file, likely in an HttpResponse document (Content Type: applicaiton/json)
+	 * @param obj a Java <code> Object </code> instance
 	 * @return <code> String </code> representation of object, or <br />
 	 * 			<code> null </code> if object parameter is indeed null
 	 */
@@ -43,8 +33,8 @@ public class JSONUtil {
 		} catch (JsonProcessingException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
+			log.warn("EXCEPTION: JsonProcessingException when attempting to write Object as a String");
+
 		}
 	
 		return jsonString;
