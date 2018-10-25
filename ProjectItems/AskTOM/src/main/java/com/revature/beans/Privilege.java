@@ -39,8 +39,10 @@ public class Privilege {
 			this.name = name;
 		}
 		
-		
-		
+		public Privilege(String name) {
+			super();
+			this.name = name;
+		}
 		public Privilege() {
 			super();
 		}

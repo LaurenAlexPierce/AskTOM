@@ -5,11 +5,11 @@
     <classes>
       <class name="com.revature.tests.PrivilegeDao_Test">
         <methods>
+          <include name="selectPrivilegeByIdTest"/>
           <include name="beforeClass"/>
-          <include name="f"/>
-          <include name="beforeTest"/>
+          <include name="insertPrivilegeTest"/>
           <include name="afterClass"/>
-          <include name="afterTest"/>
+          <include name="getAllPrivilegesTest"/>
         </methods>
       </class> <!-- com.revature.tests.PrivilegeDao_Test -->
     </classes>
