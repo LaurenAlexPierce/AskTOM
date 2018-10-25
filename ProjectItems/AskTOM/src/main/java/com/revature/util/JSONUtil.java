@@ -34,6 +34,7 @@ public class JSONUtil {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			log.warn("EXCEPTION: JsonProcessingException when attempting to write Object as a String");
+
 		}
 	
 		return jsonString;

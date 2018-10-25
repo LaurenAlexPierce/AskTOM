@@ -1,15 +1,24 @@
   <!-- TOP NAVBAR START-->
   <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top col-12 clearfix">
-    <a class="navbar-brand" href="#">
-        <img src="./resources/images/bit-bank.png" alt="logo" style="width:40px;"> AskTOM    </a>
+    <a class="navbar-brand" 
+      style="color:whitesmoke">
+         AskTOM    </a>
     <ul class="navbar-nav ml-auto">
     </ul>
     <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <a class="nav-link dropdown-toggle" 
+        role="button" 
+        data-toggle="dropdown" 
+        aria-haspopup="true" 
+        style="color:whitesmoke"
+        aria-expanded="false">
         Menu
       </a>
-      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item">{{Action}}</a>
+      <div class="dropdown-menu" 
+        aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" 
+          *ngFor="let option of options"
+          >{{option.name}}</a>
       </div>
     </li>
   </nav>
