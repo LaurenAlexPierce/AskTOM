@@ -1,16 +1,16 @@
+<app-navbar></app-navbar>
 <div class="container-fluid">
   <div class="d-flex justify-content-center">
     <h1>Please Register</h1>
   </div>
-  <form method=POST action="register.do">
       <!-- Userame -->
       <div class="row">
         <div class="col-3"></div>
         <div class="col-6">
-          <div class="form-group">
-              Username:<input type="text" class="form-control" 
-              [(ngModel)]=newTom.username required>
-          </div>
+              Username:<input type="text" 
+              class="form-control"
+              id="register-username"
+              [(ngModel)]=addNewTom.username required>
         </div>
         <div class="col-3"></div>
       </div>
@@ -18,10 +18,11 @@
       <div class="row">
         <div class="col-3"></div>
         <div class="col-6">
-          <div class="form-group">
-              Password:<input type="password" class="form-control"
-                  [(ngModel)]=newTom.password required>
-          </div>
+          Password:
+          <input type="password"
+                class="form-control" 
+                id="register-password"
+                [(ngModel)]=addNewTom.password required>
         </div>
         <div class="col-3"></div>
       </div>
@@ -29,27 +30,42 @@
       <div class="row">
         <div class="col-3"></div>
         <div class="col-6">
-          <div class="form-group">
-              Confirm Password:<input type="password" class="form-control"
-                  [(ngModel)]=password-confirm required>
+          Confirm Password:
+          <input type="password" 
+              class="form-control"
+              id="register-password-confirm"
+              [(ngModel)]=addNewTom.passwordConfirm required>
+        </div>
+        <div class="col-3"></div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+          <div ngbDropdown>
+            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle><span>{{privileges.name}}</span></button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button *ngFor="let option of options" (click)=setDropdownText(option.name) class="btn dropdown-item text-center"><span>{{option.name}}</span></button>
+            </div>
           </div>
         </div>
         <div class="col-3"></div>
       </div>
       <br>
       <br>
-      <!-- for a single button in the middle of a row -->
-      <div class="row">
-          <div class="col-4">
-          </div>
-          <div class="col-4">
-            <button class="btn-block btn-primary text-center"><span>REGISTER</span></button>
-          </div>
-          <div class="col-4">
-            <button class="btn-block btn-default" href="index.html"><span>BACK</span></button>
-        </div>
-        </div>
-      <br>
-      <br>
-  </form>
+  <!-- for a single button in the middle of a row -->
+  <div class="row">
+    <div class="col-4">
+    </div>
+    <div class="col-4">
+      <nav><a routerLink="/login" routerLinkActive="active">
+      <button class="btn-primary text-center"><span>Confirm</span></button>
+      </a></nav>
+    </div>
+    <div class="col-4">
+      <nav><a routerLink="/login" routerLinkActive="active">
+      <button class="btn-default" ><span>Cancel</span></button>
+      </a></nav>
+    </div>
+  </div>
 </div>

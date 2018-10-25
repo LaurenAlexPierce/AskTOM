@@ -1,12 +1,10 @@
 package com.revature.servlets;
 
 import java.io.IOException;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import com.revature.beans.Privilege;
 import com.revature.beans.Tom;
 import com.revature.daos.PrivilegeDao;
@@ -66,7 +64,6 @@ public class RegisterServlet extends HttpServlet {
 		// Send JSON response doc back with key: "registerSuccess" and value: true or false to be handled
 		// in Angular
 		response.getWriter().write(JSONUtil.convertJavaToJSON(registerSuccess));
-		
 	}
 
 }

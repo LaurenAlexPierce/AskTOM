@@ -39,6 +39,7 @@ public class LoginServlet extends HttpServlet {
 		Tom user = null;
 		// Set content type of response document
 		response.setContentType("application/json");
+
 		String username = null; // Assigned to JSON response document as key-value pair
 		Integer privId = -1;
 		
@@ -78,6 +79,7 @@ public class LoginServlet extends HttpServlet {
 		
 		// ASSERT: request and response documents sent back to Web Container (then client)
 		
+
 	}
 
 }

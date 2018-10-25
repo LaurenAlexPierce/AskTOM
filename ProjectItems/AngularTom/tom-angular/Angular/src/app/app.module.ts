@@ -1,3 +1,4 @@
+import { TomService } from './services/tom.service';
 import { ResponseComponent } from './components/response/response.component';
 import { HomeComponent } from './components/home/home.component';
 import { appRoutes } from './routes';
@@ -11,6 +12,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { RouterModule } from '@angular/router';
 import { TopicListComponent } from './components/topic-list/topic-list.component';
 import { RegisterComponent } from './components/register/register.component';
+import { HttpClientModule } from '@angular/common/http';
+import { RegisterTomService } from './services/register-tom.service';
 
 @NgModule({
   declarations: [
@@ -25,9 +28,10 @@ import { RegisterComponent } from './components/register/register.component';
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [TomService,RegisterTomService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
