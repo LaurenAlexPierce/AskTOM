@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpParams, HttpHeaders, HttpClient } from '@angular/common/http';
 import { Tom } from '../components/tom/tom';
+import { RegisterResponse } from '../components/register/register-response/registerResponse';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ export class RegisterTomService {
     headers: new HttpHeaders({ 'Content-Type': 'application/json'})
   }
 
-  addTom(username:string, password:string, passwordConfirm:string, privId:number){
+  addFreshNewTom(username:string, password:string, passwordConfirm:string, privId:number){
     let body = new HttpParams();
     /* Point to tomcat server */
     let headers = new HttpHeaders().set(
@@ -25,7 +26,7 @@ export class RegisterTomService {
       body = body.set('passwordConfirm', passwordConfirm)
       body = body.set('privId', privId.toString());
       /* Point to tomcat server */
-    return this.http.post<Tom>("http://loaclhost:8085/AskTOM/RegisterServlet",
+    return this.http.post<RegisterResponse>("http://loaclhost:8085/AskTOM/RegisterServlet",
     body,
     {headers:headers});
   }

@@ -1,5 +1,6 @@
 <app-navbar [options]="navbarOptions"></app-navbar>
 <div class="container-fluid">
+  
   <div class="d-flex justify-content-center">
     <h1>Welcome to AskTOM</h1>
   </div>
@@ -8,7 +9,8 @@
       <div class="col-3"></div>
       <div class="col-6">
           <div class="form-group">
-              Username:<input type="text" class="form-control" 
+              Username:<input type="text" 
+              class="form-control" 
               [(ngModel)]=newTom.username required>
           </div>
       </div>
@@ -18,7 +20,8 @@
       <div class="col-3"></div>
       <div class="col-6">
         <div class="form-group">
-            Password:<input type="password" class="form-control"
+            Password:<input type="password" 
+            class="form-control"
             [(ngModel)]=newTom.password required>
         </div>
       </div>

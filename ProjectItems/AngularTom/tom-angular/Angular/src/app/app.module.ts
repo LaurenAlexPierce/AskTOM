@@ -13,6 +13,7 @@ import { RouterModule } from '@angular/router';
 import { TopicListComponent } from './components/topic-list/topic-list.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RegisterTomService } from './services/register-tom.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
     RouterModule.forRoot(appRoutes),
     HttpClientModule
   ],
-  providers: [TomService],
+  providers: [TomService,RegisterTomService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
