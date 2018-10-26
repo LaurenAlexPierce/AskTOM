@@ -1,7 +1,9 @@
+import { appRoutes } from './../../routes';
 import { NavbarComponent } from './../navbar/navbar.component';
 import { Topic } from './topic/topic';
 import { TomService } from './../../services/tom.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -13,7 +15,12 @@ export class HomeComponent implements OnInit {
 
   topics:Topic[] = [];
 
-  constructor(/*private tomService:TomService*/) { }
+  constructor(/*private tomService:TomService,*/
+    private router:Router) { }
+
+  goToLogin(){
+    
+  }
 
   ngOnInit() {
    /* this.tomService
