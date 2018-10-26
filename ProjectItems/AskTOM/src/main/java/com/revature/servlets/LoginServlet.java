@@ -39,10 +39,13 @@ public class LoginServlet extends HttpServlet {
 		Tom user = null;
 		// Set content type of response document
 		response.setContentType("application/json");
+
+		String username = null; // Assigned to JSON response document as key-value pair
+		Integer privId = -1;
 		
 		// Get parameters by name from request document
-		String inputUsername = (String)request.getParameter("username");
-		String inputPassword = (String)request.getParameter("password");
+		String inputUsername = request.getParameter("username");
+		String inputPassword = request.getParameter("password");
 		
 		user = userDao.selectTomByUsername(inputUsername);
 		
@@ -58,15 +61,25 @@ public class LoginServlet extends HttpServlet {
 					+ " Username posted: " + inputUsername );
 			
 		} else {
-			// ASSERT: User found, and passwords match, so return response with string representation of JSON
-			// 			object
-			String jsonString = JSONUtil.convertJavaToJSON(user);
-			response.getWriter().write(jsonString);
-			log.info("User found and password matches. User record returned in JSON format./n"
+			// ASSERT: User found, and passwords match, so return response with string representation of username
+			// 			and privId Integer Java Objects (in JSON)
+			username = inputUsername;
+			privId = user.getPrivId().getId();
+			
+			// Write JSON string version of username and privId objects to response document
+			response.getWriter().write(JSONUtil.convertJavaToJSON(username));
+			response.getWriter().write(JSONUtil.convertJavaToJSON(privId));
+			
+			log.info("User found and password matches. Username and privId Integer returned in JSON format./n"
 					+ "Username: " + user.getUsername() + "Privledge Id: " + user.getPrivId());
 		}
 		
+		
+
+		
 		// ASSERT: request and response documents sent back to Web Container (then client)
+		
+
 	}
 
 }
