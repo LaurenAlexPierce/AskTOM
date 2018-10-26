@@ -8,6 +8,7 @@ import { NavbarComponent } from '../navbar/navbar.component';
 })
 export class ResponseComponent implements OnInit {
 
+  responses = []
   constructor() { }
 
   ngOnInit() {
