@@ -66,13 +66,16 @@ public class LoginServlet extends HttpServlet {
 			username = inputUsername;
 			privId = user.getPrivId().getId();
 			
+			// Write JSON string version of username and privId objects to response document
+			response.getWriter().write(JSONUtil.convertJavaToJSON(username));
+			response.getWriter().write(JSONUtil.convertJavaToJSON(privId));
+			
 			log.info("User found and password matches. Username and privId Integer returned in JSON format./n"
 					+ "Username: " + user.getUsername() + "Privledge Id: " + user.getPrivId());
 		}
 		
-		// Write JSON string version of username and privId objects to response document
-		response.getWriter().write(JSONUtil.convertJavaToJSON(username));
-		response.getWriter().write(JSONUtil.convertJavaToJSON(privId));
+		
+
 		
 		// ASSERT: request and response documents sent back to Web Container (then client)
 		
