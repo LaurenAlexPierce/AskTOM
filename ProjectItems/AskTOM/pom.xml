@@ -19,7 +19,7 @@
                 <configuration>
                     <webResources>
                         <resource>
-                            <directory>../dist</directory>
+                            <directory>target/resources/dist</directory>
                         </resource>
                     </webResources>
                 </configuration>
