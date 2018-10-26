@@ -3,15 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.revature.tests.PrivilegeDao_Test">
+      <class name="com.revature.tests.TomDao_Test">
         <methods>
-          <include name="selectPrivilegeByIdTest"/>
-          <include name="beforeClass"/>
-          <include name="insertPrivilegeTest"/>
-          <include name="afterClass"/>
-          <include name="getAllPrivilegesTest"/>
+          <include name="testInsert"/>
         </methods>
-      </class> <!-- com.revature.tests.PrivilegeDao_Test -->
+      </class> <!-- com.revature.tests.TomDao_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
