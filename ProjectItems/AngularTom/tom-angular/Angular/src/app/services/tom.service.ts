@@ -15,7 +15,7 @@ export class TomService {
   }
 
   getTopics(){
-    return this.http.get<Topic[]>("http://localhost:8085/AskTOM/GetTopics");
+    return this.http.get<Topic[]>("http://18.219.234.217:8085/AskTOM/GetTopics");
   }
   
   getTom(username:string, password:string){
@@ -28,7 +28,7 @@ export class TomService {
       body = body.set('username', username);
       body = body.set('password', password);
       /* Point to tomcat server */
-    return this.http.post<ActiveTom>("http://localhost:8085/AskTOM/LoginServlet",
+    return this.http.post<ActiveTom>("http://18.219.234.217:8085/AskTOM/LoginServlet",
     body,
     {headers:headers});
   }
