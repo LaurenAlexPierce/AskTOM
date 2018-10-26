@@ -34,8 +34,9 @@ export class LoginComponent implements OnInit {
         /**
          * Pass result to home with a 
          * logged-in user 
-         *  to P         * Pass result to 
-outer.navigateByUrl('/home');
+         */
+        if(data != null){
+          this.router.navigateByUrl('/home');
         }
       },
       error => {
@@ -51,3 +52,5 @@ outer.navigateByUrl('/home');
   ngOnInit() {
     this.option;
     this.options;
+  }
+}
