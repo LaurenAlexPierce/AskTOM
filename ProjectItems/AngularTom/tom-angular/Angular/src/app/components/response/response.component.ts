@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavbarComponent } from '../navbar/navbar.component';
+import { Response } from './response/response';
 
 @Component({
   selector: 'app-response',
@@ -8,7 +9,8 @@ import { NavbarComponent } from '../navbar/navbar.component';
 })
 export class ResponseComponent implements OnInit {
 
-  responses = []
+  responses:Response[]=[
+  ]
   constructor() { }
 
   ngOnInit() {
