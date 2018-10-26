@@ -41,27 +41,27 @@ public class PrivilegeDao_Test {
 		Assert.assertEquals(testName, "test");
 	}
 
-	@Test
-	public void getAllPrivilegesTest() {
-		List<Privilege> listTest = pd.getAllPrivileges();
-		String testName1, testName2;
-		//set testName1 = to first element's name of retrieved list
-		Privilege p = listTest.get(0);
-		testName1 = p.getName();
-		//set testName2 = to second element's name of retrieved list
-		p = listTest.get(1);
-		testName2 = p.getName();
-	
-		/*
-		 * getAll method will return ALL of the privileges.
-		 * We will only test this method against the privileges 
-		 * that we know will always be in the list regardless of 
-		 * how many new privileges are added. 
-		 */
-		Assert.assertEquals(testName1, "admin");
-		Assert.assertEquals(testName2, "tom");
-	}
-	
+//	@Test
+//	public void getAllPrivilegesTest() {
+//		List<Privilege> listTest = pd.getAllPrivileges();
+//		String testName1, testName2;
+//		//set testName1 = to first element's name of retrieved list
+//		Privilege p = listTest.get(0);
+//		testName1 = p.getName();
+//		//set testName2 = to second element's name of retrieved list
+//		p = listTest.get(1);
+//		testName2 = p.getName();
+//	
+//		/*
+//		 * getAll method will return ALL of the privileges.
+//		 * We will only test this method against the privileges 
+//		 * that we know will always be in the list regardless of 
+//		 * how many new privileges are added. 
+//		 */
+//		Assert.assertEquals(testName1, "admin");
+//		Assert.assertEquals(testName2, "tom");
+//	}
+//	
 	@Test
 	public void updatePrivilegeTest() {
 		//insert new priv to test for updating the name field
