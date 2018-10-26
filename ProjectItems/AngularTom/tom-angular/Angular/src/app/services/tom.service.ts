@@ -32,6 +32,4 @@ export class TomService {
     body,
     {headers:headers});
   }
-
-  
 }

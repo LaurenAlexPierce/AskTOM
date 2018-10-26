@@ -32,10 +32,10 @@ export class LoginComponent implements OnInit {
     ).subscribe(
       data => {
         /**
-         * Pass result to 
-         */
-        if(data != null){
-          this.router.navigateByUrl('/home');
+         * Pass result to home with a 
+         * logged-in user 
+         *  to P         * Pass result to 
+outer.navigateByUrl('/home');
         }
       },
       error => {
@@ -51,5 +51,3 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     this.option;
     this.options;
-  }
-}

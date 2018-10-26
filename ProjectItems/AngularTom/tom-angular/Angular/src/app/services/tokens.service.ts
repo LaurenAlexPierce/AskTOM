@@ -1,3 +1,4 @@
+import { ActiveTom } from './../components/tom/activeTom';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class TokensService {
 
-  constructor() { }
+  constructor(private activeTom:ActiveTom) { }
+
+  
 }
