@@ -36,19 +36,24 @@ export class RegisterComponent implements OnInit {
 
   addTom(){
     for(var item of this.options){
+      console.trace('Check for assigned option.');
       if(item.name == this.privileges.name){
+        console.log('Options match in getTom().');
         this.addNewTom.privId = item.id;
       }
     }
     
     if(this.addNewTom.privId != 0){
       if(this.addNewTom.password == this.addNewTom.passwordConfirm){
+        console.debug('Passwords match in getTom().');
         new NewTom(
           this.addNewTom.username,
           this.addNewTom.password,
           this.addNewTom.passwordConfirm,
           this.addNewTom.privId
         )
+
+        console.warn('Calling addFreshNewTom()');
 
         this.registerTomService.addFreshNewTom( this.addNewTom.username,
           this.addNewTom.password,
@@ -63,21 +68,22 @@ export class RegisterComponent implements OnInit {
               */
              this.feedback = data;
              if(this.feedback){
-              
+              console.log('Received response from servlet with the following data: ',data);
              } else {
-
+              console.log('send an addFreshNewTom with response: ',data);
              }
             },
             error=>{
-              console.log(error.message);
+              console.error(error.message);
             }
           );
 
       } else {
         /* */
+        console.debug('Passwords do not match.');
       }
     } else {
-      
+      console.debug('No privId is assigned to addNewTom.');
     }
   }
 
