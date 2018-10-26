@@ -11,7 +11,7 @@ import { TomService } from 'src/app/services/tom.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
+  message:string="";
   newTom:Tom = new Tom("","",2);
 
   option:Option={id:1,name:"true"};
@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
         }
       },
       error => {
-
+        this.message = "Something went wrong. Please try again later.";
       }
     );
 
