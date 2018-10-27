@@ -50,10 +50,12 @@ public class RegisterServlet extends HttpServlet {
 		Privilege privId = privDao.selectPrivilegeById(Integer.parseInt(request.getParameter("privId")));
 		
 		Tom tomInDb = tomDao.selectTomByUsername(username);
+		log.trace("Inside RegisterServlet: Checking if Tom is NOT in Db and password and confirm password are equal.");
 		
 		if (tomInDb == null && password.equals(confirmPassword)) {
 			// ASSERT: (AFFIRMATIVE BRANCH) No user found in Db with same username
 			//			AND password equals confirmPassword
+			log.trace("Inside RegisterServlet: Checking if Tom is in Db and password and confirm password are equal.");
 			newTom = new Tom();
 			newTom.setUsername(username);
 			newTom.setPassword(password);
@@ -61,6 +63,7 @@ public class RegisterServlet extends HttpServlet {
 			
 			if(tomDao.insertTom(newTom) != null) {
 				registerSuccess = true;
+				log.info("New user (Tom) successfully inserted into Db");
 			}
 			
 		}
