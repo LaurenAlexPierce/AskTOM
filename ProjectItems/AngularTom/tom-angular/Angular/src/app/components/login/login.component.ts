@@ -39,9 +39,14 @@ export class LoginComponent implements OnInit {
          */
         if(data != null){
           this.router.navigateByUrl('/home');
+          this.logger.debug('Data has been received in addTom().', data);
+        }
+        else{
+          this.logger.trace('AddTom() returned null.');
         }
       },
       error => {
+        this.logger.trace('Error sending request.');
         this.message = "Something went wrong. Please try again later.";
       }
     );
