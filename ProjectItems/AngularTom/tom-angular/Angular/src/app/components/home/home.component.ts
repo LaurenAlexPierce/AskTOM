@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
 
   topics:Topic[] = [];
 
-  constructor(/*private tomService:TomService,*/
+  constructor(private tomService:TomService,
     private router:Router) { }
 
   goToLogin(){
@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-   /* this.tomService
+    this.tomService
       .getTopics()
       .subscribe(
         data => {
@@ -33,7 +33,6 @@ export class HomeComponent implements OnInit {
           console.log(error.message);
         }
       );
-      */
   }
 
 }

@@ -3,6 +3,7 @@ package com.revature.daos;
 import java.util.List;
 
 import org.hibernate.HibernateException;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -50,19 +51,25 @@ public class TomDaoImpl implements TomDao {
 
 	//selects a specific tom by user name; returns the tom object
 	@Override
-	public Tom selectTomByUsername(String username) {
+	public Tom selectTomByUsername(String uname) {
 		
+		Tom tom = null;
+		Query query = null;
 		Session session = HibernateUtil.getSession();
-		Tom t = null;
+		String hql;
 		
 		try {
-			t = (Tom)session.get(Tom.class, username);
-		} catch (HibernateException he) {
+			hql = "From Tom where username=:uname";
+			query = session.createQuery(hql);
+			query.setParameter("uname", uname);
+			tom = (Tom)query.uniqueResult();
+		}catch(HibernateException he) {
 			he.printStackTrace();
-		} finally {
+		}finally {
 			session.close();
 		}
-		return t;
+		
+		return tom;
 	}
 	
 	//selects a specific tom by id; returns the tom object
@@ -125,6 +132,7 @@ public class TomDaoImpl implements TomDao {
 		}
 
 	}
+
 
 
 }
