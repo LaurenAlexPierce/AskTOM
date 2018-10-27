@@ -36,15 +36,6 @@ public class RegisterServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Determine how to handle registration if a user is already found to have the same username from request document
-		
-		// Request from frontend needs to be checked to make sure request body contains parameters
-		Map<String, String[]> paramMap = request.getParameterMap();
-		
-		for (String key: paramMap.keySet()) {
-			log.info(key);
-			log.info(paramMap.get(key));
-		}
-		
 		TomDao tomDao = new TomDaoImpl();
 		PrivilegeDao privDao = new PrivilegeDaoImpl();
 		// Set response content type to json
