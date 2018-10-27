@@ -1,25 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="55821" started-at="2018-10-27T16:23:57Z" finished-at="2018-10-27T16:24:53Z">
+  <suite name="Default suite" duration-ms="55171" started-at="2018-10-27T19:07:03Z" finished-at="2018-10-27T19:07:58Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="55821" started-at="2018-10-27T16:23:57Z" finished-at="2018-10-27T16:24:53Z">
-      <class name="com.revature.tests.TopicDao_Test">
-        <test-method status="PASS" signature="testGetAllTopics()[pri:0, instance:com.revature.tests.TopicDao_Test@63440df3]" name="testGetAllTopics" duration-ms="55247" started-at="2018-10-27T16:23:57Z" finished-at="2018-10-27T16:24:53Z">
+    <test name="Default test" duration-ms="55171" started-at="2018-10-27T19:07:03Z" finished-at="2018-10-27T19:07:58Z">
+      <class name="com.revature.tests.ResponseDao_Test">
+        <test-method status="PASS" signature="setupResponse()[pri:0, instance:com.revature.tests.ResponseDao_Test@1b26f7b2]" name="setupResponse" is-config="true" duration-ms="54218" started-at="2018-10-27T19:07:03Z" finished-at="2018-10-27T19:07:57Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGetAllTopics -->
-        <test-method status="PASS" signature="testSelectTopic()[pri:0, instance:com.revature.tests.TopicDao_Test@63440df3]" name="testSelectTopic" duration-ms="43" started-at="2018-10-27T16:24:53Z" finished-at="2018-10-27T16:24:53Z">
+        </test-method> <!-- setupResponse -->
+        <test-method status="PASS" signature="testGetAll()[pri:0, instance:com.revature.tests.ResponseDao_Test@1b26f7b2]" name="testGetAll" duration-ms="305" started-at="2018-10-27T19:07:57Z" finished-at="2018-10-27T19:07:58Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSelectTopic -->
-        <test-method status="PASS" signature="testUpdateTopic()[pri:0, instance:com.revature.tests.TopicDao_Test@63440df3]" name="testUpdateTopic" duration-ms="510" started-at="2018-10-27T16:24:53Z" finished-at="2018-10-27T16:24:53Z">
+        </test-method> <!-- testGetAll -->
+        <test-method status="PASS" signature="testGetAllResponsesByTopic()[pri:0, instance:com.revature.tests.ResponseDao_Test@1b26f7b2]" name="testGetAllResponsesByTopic" duration-ms="188" started-at="2018-10-27T19:07:58Z" finished-at="2018-10-27T19:07:58Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testUpdateTopic -->
-      </class> <!-- com.revature.tests.TopicDao_Test -->
+        </test-method> <!-- testGetAllResponsesByTopic -->
+        <test-method status="PASS" signature="testSelectResponse()[pri:0, instance:com.revature.tests.ResponseDao_Test@1b26f7b2]" name="testSelectResponse" duration-ms="48" started-at="2018-10-27T19:07:58Z" finished-at="2018-10-27T19:07:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSelectResponse -->
+        <test-method status="PASS" signature="testUpdateResponse()[pri:0, instance:com.revature.tests.ResponseDao_Test@1b26f7b2]" name="testUpdateResponse" duration-ms="228" started-at="2018-10-27T19:07:58Z" finished-at="2018-10-27T19:07:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateResponse -->
+        <test-method status="PASS" signature="teardownResponse()[pri:0, instance:com.revature.tests.ResponseDao_Test@1b26f7b2]" name="teardownResponse" is-config="true" duration-ms="147" started-at="2018-10-27T19:07:58Z" finished-at="2018-10-27T19:07:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardownResponse -->
+      </class> <!-- com.revature.tests.ResponseDao_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

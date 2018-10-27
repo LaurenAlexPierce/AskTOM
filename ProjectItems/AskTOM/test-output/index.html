@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\emoor\AppData\Local\Temp\testng-eclipse-567736933\testng-customsuite.xml</span>
+                    <span>C:\Users\emoor\AppData\Local\Temp\testng-eclipse-2094949142\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,17 +102,22 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.revature.tests.TopicDao_Test" hash-for-method="testGetAllTopics">testGetAllTopics</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.revature.tests.ResponseDao_Test" hash-for-method="testGetAll">testGetAll</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.revature.tests.TopicDao_Test" hash-for-method="testSelectTopic">testSelectTopic</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.revature.tests.ResponseDao_Test" hash-for-method="testGetAllResponsesByTopic">testGetAllResponsesByTopic</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.revature.tests.TopicDao_Test" hash-for-method="testUpdateTopic">testUpdateTopic</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.revature.tests.ResponseDao_Test" hash-for-method="testSelectResponse">testSelectResponse</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.revature.tests.ResponseDao_Test" hash-for-method="testUpdateResponse">testUpdateResponse</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -130,28 +135,35 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.revature.tests.TopicDao_Test</span>
+              <span class="class-name">com.revature.tests.ResponseDao_Test</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testGetAllTopics">
-                  </a> <!-- testGetAllTopics -->
-                  <span class="method-name">testGetAllTopics</span>
+                  <a name="testGetAll">
+                  </a> <!-- testGetAll -->
+                  <span class="method-name">testGetAll</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testSelectTopic">
-                  </a> <!-- testSelectTopic -->
-                  <span class="method-name">testSelectTopic</span>
+                  <a name="testGetAllResponsesByTopic">
+                  </a> <!-- testGetAllResponsesByTopic -->
+                  <span class="method-name">testGetAllResponsesByTopic</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testUpdateTopic">
-                  </a> <!-- testUpdateTopic -->
-                  <span class="method-name">testUpdateTopic</span>
+                  <a name="testSelectResponse">
+                  </a> <!-- testSelectResponse -->
+                  <span class="method-name">testSelectResponse</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUpdateResponse">
+                  </a> <!-- testUpdateResponse -->
+                  <span class="method-name">testUpdateResponse</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -159,7 +171,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\emoor\AppData\Local\Temp\testng-eclipse-567736933\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\emoor\AppData\Local\Temp\testng-eclipse-2094949142\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -168,7 +180,7 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.revature.tests.TopicDao_Test&quot;/&gt;
+      &lt;class name=&quot;com.revature.tests.ResponseDao_Test&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -208,24 +220,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testGetAllTopics')
-data.setCell(0, 2, 'com.revature.tests.TopicDao_Test')
-data.setCell(0, 3, 55247);
+data.setCell(0, 1, 'testGetAll')
+data.setCell(0, 2, 'com.revature.tests.ResponseDao_Test')
+data.setCell(0, 3, 305);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testUpdateTopic')
-data.setCell(1, 2, 'com.revature.tests.TopicDao_Test')
-data.setCell(1, 3, 510);
+data.setCell(1, 1, 'testUpdateResponse')
+data.setCell(1, 2, 'com.revature.tests.ResponseDao_Test')
+data.setCell(1, 3, 228);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testSelectTopic')
-data.setCell(2, 2, 'com.revature.tests.TopicDao_Test')
-data.setCell(2, 3, 43);
+data.setCell(2, 1, 'testGetAllResponsesByTopic')
+data.setCell(2, 2, 'com.revature.tests.ResponseDao_Test')
+data.setCell(2, 3, 188);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testSelectResponse')
+data.setCell(3, 2, 'com.revature.tests.ResponseDao_Test')
+data.setCell(3, 3, 48);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 55 seconds</span>
+              <span class="suite-total-time">Total running time: 769 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -251,19 +267,31 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.revature.tests.TopicDao_Test</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">testGetAllTopics</span>
+              <div class="chronological-class-name">com.revature.tests.ResponseDao_Test</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setupResponse</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testGetAll</span>
+                <span class="method-start">54239 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">testSelectTopic</span>
-                <span class="method-start">55248 ms</span>
+                <span class="method-name">testGetAllResponsesByTopic</span>
+                <span class="method-start">54546 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">testUpdateTopic</span>
-                <span class="method-start">55293 ms</span>
+                <span class="method-name">testSelectResponse</span>
+                <span class="method-start">54736 ms</span>
               </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testUpdateResponse</span>
+                <span class="method-start">54785 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">teardownResponse</span>
+                <span class="method-start">55014 ms</span>
+              </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
