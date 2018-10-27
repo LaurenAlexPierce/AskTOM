@@ -29,6 +29,6 @@ public class RegisterTest {
 	  driver.findElement(By.name("register-username")).sendKeys("newUser");
 	  driver.findElement(By.name("register-password")).sendKeys("newPassword");
 	  driver.findElement(By.name("register-password-confirm")).sendKeys("newPassword");
-	  
+	  driver.findElement(By.name(""));
   }
 }
