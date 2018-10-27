@@ -1,10 +1,13 @@
 package com.revature.servlets;
 
 import java.io.IOException;
+import java.util.Map;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import com.revature.beans.Privilege;
 import com.revature.beans.Tom;
 import com.revature.daos.PrivilegeDao;
@@ -12,6 +15,7 @@ import com.revature.daos.PrivilegeDaoImpl;
 import com.revature.daos.TomDao;
 import com.revature.daos.TomDaoImpl;
 import com.revature.util.JSONUtil;
+import static com.revature.util.LoggingUtil.log;
 
 /**
  * Servlet implementation class RegisterServlet
