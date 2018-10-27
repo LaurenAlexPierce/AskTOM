@@ -43,14 +43,10 @@ public class GetAllTopicsServlet extends HttpServlet {
 		
 		topics = topicDao.getAllTopics();
 		
-		if (topics == null) {
-			// ASSERT: DB contains no topics
-			// 			return empty response document
-		} else {
+		if (topics != null) {
 			// ASSERT: List of Topic beans returned from TopicDAO,
 			//			Write list as JSON string to response document
-			String topicsJSONString = JSONUtil.convertJavaToJSON(topics);
-			response.getWriter().write(topicsJSONString);
+			response.getWriter().write(JSONUtil.convertJavaToJSON(topics));
 			log.info("Topics found. List of Topic objects returned in JSON format.");
 		}
 		

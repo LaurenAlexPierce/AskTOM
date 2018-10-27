@@ -26,7 +26,7 @@ export class RegisterTomService {
       body = body.set('passwordConfirm', passwordConfirm)
       body = body.set('privId', privId.toString());
       /* Point to tomcat server */
-    return this.http.post<RegisterResponse>("http://loaclhost:8085/AskTOM/RegisterServlet",
+    return this.http.post<RegisterResponse>("http://18.219.234.217:8085/AskTOM/RegisterServlet",
     body,
     {headers:headers});
   }

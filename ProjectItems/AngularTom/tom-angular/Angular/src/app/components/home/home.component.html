@@ -1,11 +1,28 @@
-<app-navbar></app-navbar>
-<p>
-  home-work(s)!
-</p>
+  <!-- TOP NAVBAR START-->
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top col-12 clearfix">
+    <a class="navbar-brand" 
+      style="color:whitesmoke">
+         AskTOM    </a>
+    <ul class="navbar-nav ml-auto">
+    </ul>
+    <div class="row">
+        <div class="col-10"></div>
+        <div class="col-2">
+          <a routerLinkActive="active" routerLink="/login">Login</a>
+        </div>
+    </div>
+  </nav>
+<!-- NAVBAR END -->
 <div *ngFor="let topic of topics">
     <div class="container">
-        <div class="col-sm-3"></div>
-        <div class="col-sm-6">{{topic.name}}</div>
-        <div class="col-sm-3"></div>
-      </div>
+        <div class=cardSection>
+          <div class="card">
+            <div class="card-body">{{topic.name}}</div>
+          </div>
+        </div>
+     </div>
 </div>
+
+
+<!-- NavBar with Nav Pills for cleanish looking navigation on the bottom of the page -->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom col-12">

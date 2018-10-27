@@ -4,6 +4,7 @@ import { HomeComponent } from './components/home/home.component';
 import { appRoutes } from './routes';
 import { BrowserModule } from 'node_modules/@angular/platform-browser';
 import { NgModule } from 'node_modules/@angular/core';
+import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
@@ -29,7 +30,8 @@ import { RegisterTomService } from './services/register-tom.service';
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(appRoutes),
-    HttpClientModule
+    HttpClientModule,
+    LoggerModule.forRoot({serverLoggingUrl: '/api/logs', level: NgxLoggerLevel.DEBUG, serverLogLevel: NgxLoggerLevel.ERROR})
   ],
   providers: [TomService,RegisterTomService],
   bootstrap: [AppComponent]

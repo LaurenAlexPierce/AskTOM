@@ -1,6 +1,15 @@
-<app-navbar [options]="options"></app-navbar>
+  <!-- TOP NAVBAR START-->
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top col-12 clearfix">
+        <a class="navbar-brand" 
+          style="color:whitesmoke">
+             AskTOM    </a>
+        <ul class="navbar-nav ml-auto">
+        </ul>
+    </nav>
+    <!-- NAVBAR END -->
+
 <div class="container-fluid">
-  
+  <p>{{message}}</p>
   <div class="d-flex justify-content-center">
     <h1>Welcome to AskTOM</h1>
   </div>
@@ -47,3 +56,6 @@
       <div class="col-4"></div>
     </div>
 </div>
+
+<!-- NavBar with Nav Pills for cleanish looking navigation on the bottom of the page -->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom col-12">
