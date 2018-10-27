@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
 
   topics:Topic[] = [];
 
-
+  topicSelect:Topic;
 
   constructor(private tomService:TomService,
     private router:Router,
@@ -45,7 +45,8 @@ export class HomeComponent implements OnInit {
       // component
     this.data.currentTopic.subscribe(
       data => {
-        // listen to 
+        // listen for changes to current topic
+        
       }
     )
   }
