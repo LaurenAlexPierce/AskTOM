@@ -9,9 +9,6 @@ import { Option } from '../option/option';
 
 export class NavbarComponent implements OnInit {
 
-  @Input() option:Option;
-
-  @Input() options:Option[]=[];
 
   constructor() { }
 

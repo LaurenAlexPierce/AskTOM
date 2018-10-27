@@ -4,6 +4,7 @@ import { Topic } from './topic/topic';
 import { TomService } from './../../services/tom.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { TopicToResponseService } from 'src/app/services/topic-to-response.service';
 
 
 @Component({
@@ -15,8 +16,11 @@ export class HomeComponent implements OnInit {
 
   topics:Topic[] = [];
 
+  topicSelect:Topic;
+
   constructor(private tomService:TomService,
-    private router:Router) { 
+    private router:Router,
+    private data: TopicToResponseService) { 
     }
 
   goToLogin(){
@@ -35,6 +39,28 @@ export class HomeComponent implements OnInit {
           console.log(error.message);
         }
       );
+
+      // this is the key service for listening to 
+      // topic selection for sending to the topics 
+      // component
+    this.data.currentTopic.subscribe(
+      data => {
+        console.trace('inside the ngOnInit data service call instantiation.');
+        // listen for changes to current topic
+      }
+    )
   }
 
+  // Load 
+  loadResponses(){
+    console.trace('Entered load responses.');
+    console.debug('contents of topicSelect: ' + this.topicSelect.name);
+    this.data.changeTopic(this.topicSelect);
+    console.warn('About to route to response');
+    this.router.navigateByUrl('/response');
+  }
+
+  signedOn(){
+    // this is where we handle the logout by invalidating the user from service.
+  }
 }
