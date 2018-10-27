@@ -16,7 +16,8 @@ export class HomeComponent implements OnInit {
   topics:Topic[] = [];
 
   constructor(private tomService:TomService,
-    private router:Router) { }
+    private router:Router) { 
+    }
 
   goToLogin(){
     
@@ -27,6 +28,7 @@ export class HomeComponent implements OnInit {
       .getTopics()
       .subscribe(
         data => {
+          console.log('In ngOnInit in home. Successful get topics.', data);
           this.topics = data;
         },
         error => {
