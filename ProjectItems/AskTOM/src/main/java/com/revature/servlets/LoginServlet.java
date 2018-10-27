@@ -73,11 +73,8 @@ public class LoginServlet extends HttpServlet {
 			jsonKeys.add(username);
 			jsonKeys.add(privId);
 			
-			response.getWriter().write(JSONUtil.convertJavaToJSON(jsonKeys));
-			
 			// Write JSON string version of username and privId objects to response document
-			//response.getWriter().write(JSONUtil.convertJavaToJSON(username));
-			//response.getWriter().write(JSONUtil.convertJavaToJSON(privId));
+			response.getWriter().write(JSONUtil.convertJavaToJSON(jsonKeys));
 			
 			log.info("User found and password matches. Username and privId Integer returned in JSON format./n"
 					+ "Username: " + user.getUsername() + "Privledge Id: " + user.getPrivId());
