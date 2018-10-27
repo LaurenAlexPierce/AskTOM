@@ -45,10 +45,18 @@ export class HomeComponent implements OnInit {
       // component
     this.data.currentTopic.subscribe(
       data => {
+        console.trace('inside the ngOnInit data service call instantiation.');
         // listen for changes to current topic
-        
       }
     )
   }
 
+  loadResponses(){
+    this.data.changeTopic(this.topicSelect);
+    this.router.navigateByUrl('/response');
+  }
+
+  signedOn(){
+    // this is where we handle the logout by invalidating the user from service.
+  }
 }
