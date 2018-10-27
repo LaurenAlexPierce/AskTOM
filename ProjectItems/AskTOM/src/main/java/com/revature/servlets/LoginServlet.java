@@ -1,6 +1,8 @@
 package com.revature.servlets;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -66,9 +68,16 @@ public class LoginServlet extends HttpServlet {
 			username = inputUsername;
 			privId = user.getPrivId().getId();
 			
+			// Attempt to pass a List of Objects to frontend as JSON
+			List<Object> jsonKeys = new ArrayList<>();
+			jsonKeys.add(username);
+			jsonKeys.add(privId);
+			
+			response.getWriter().write(JSONUtil.convertJavaToJSON(jsonKeys));
+			
 			// Write JSON string version of username and privId objects to response document
-			response.getWriter().write(JSONUtil.convertJavaToJSON(username));
-			response.getWriter().write(JSONUtil.convertJavaToJSON(privId));
+			//response.getWriter().write(JSONUtil.convertJavaToJSON(username));
+			//response.getWriter().write(JSONUtil.convertJavaToJSON(privId));
 			
 			log.info("User found and password matches. Username and privId Integer returned in JSON format./n"
 					+ "Username: " + user.getUsername() + "Privledge Id: " + user.getPrivId());
