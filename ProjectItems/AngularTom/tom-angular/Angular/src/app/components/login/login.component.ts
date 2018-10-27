@@ -46,7 +46,7 @@ export class LoginComponent implements OnInit {
         }
       },
       error => {
-        console.trace('Error sending request.');
+        console.trace('Error with request.');
         this.message = "Something went wrong. Please try again later.";
       }
     );

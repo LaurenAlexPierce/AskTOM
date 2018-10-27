@@ -15,7 +15,7 @@ export class TomService {
   }
 
   getTopics(){
-    return this.http.get<Topic[]>("http://18.219.234.217:8085/AskTOM/GetTopics");
+    return this.http.get<Topic[]>("http://18.219.234.217:8085/AskTOM/GetAllTopicsServlet");
   }
   
   getTom(username:string, password:string){
