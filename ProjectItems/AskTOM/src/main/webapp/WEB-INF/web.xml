@@ -59,5 +59,14 @@
     <servlet-name>InsertResponseServlet</servlet-name>
     <url-pattern>/InsertResponseServlet</url-pattern>
   </servlet-mapping>
-
+  <servlet>
+    <description></description>
+    <display-name>InsertTopicServlet</display-name>
+    <servlet-name>InsertTopicServlet</servlet-name>
+    <servlet-class>com.revature.servlets.InsertTopicServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InsertTopicServlet</servlet-name>
+    <url-pattern>/InsertTopicServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

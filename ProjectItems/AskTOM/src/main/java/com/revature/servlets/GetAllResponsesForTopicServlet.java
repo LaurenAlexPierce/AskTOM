@@ -8,16 +8,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.log4j.Logger;
+
 import com.revature.beans.Response;
 import com.revature.daos.ResponseDao;
 import com.revature.daos.ResponseDaoImpl;
+import com.revature.util.JSONUtil;
 
 /**
  * Servlet implementation class GetAllResponsesForTopicServlet
  */
 public class GetAllResponsesForTopicServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+    
+	Logger log = Logger.getRootLogger();
+	
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -39,17 +44,20 @@ public class GetAllResponsesForTopicServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Get Topic_id parameter from request and search db for corresponding responses
-		ResponseDao responseDao = new ResponseDaoImpl();
-		
-		List<Response> responses = null;
-		
 		Integer topicId = Integer.parseInt(request.getParameter("topicId"));
+		ResponseDao responseDao = new ResponseDaoImpl();
+		List<Response> responseList = null;
 		
+		responseList = responseDao.getAllResponseByTopic(topicId);
 		
+		if (topicId != null) {
+			// ASSERT: Topic found in db,
+			//			send list of responses back to client as JSON in response document
+			response.getWriter().write(JSONUtil.convertJavaToJSON(responseList));
+			log.info("List of Response records returned as JSON to client");
+		}
 		
-		
-		
-		
+		// ASSERT: response documenet returned to client
 	}
 
 }
