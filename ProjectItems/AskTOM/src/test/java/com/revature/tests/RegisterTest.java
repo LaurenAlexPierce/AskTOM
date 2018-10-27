@@ -13,6 +13,7 @@ public class RegisterTest {
 	
   @BeforeClass
   public void setup() {
+	  System.setProperty("webdriver.gecko.driver", "drivers/geckodriver");
 	  driver = new FirefoxDriver();
 	  driver.get(url);
   }
