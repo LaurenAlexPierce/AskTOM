@@ -4,11 +4,13 @@ import { Tom } from '../tom/tom';
 import { Option } from '../option/option';
 import { Router } from '@angular/router';
 import { TomService } from 'src/app/services/tom.service';
+import { NGXLogger } from 'ngx-logger';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
+  providers:[NGXLogger]
 })
 export class LoginComponent implements OnInit {
   message:string="";
@@ -37,9 +39,14 @@ export class LoginComponent implements OnInit {
          */
         if(data != null){
           this.router.navigateByUrl('/home');
+          this.logger.debug('Data has been received in addTom().', data);
+        }
+        else{
+          this.logger.trace('AddTom() returned null.');
         }
       },
       error => {
+        this.logger.trace('Error sending request.');
         this.message = "Something went wrong. Please try again later.";
       }
     );
@@ -47,10 +54,14 @@ export class LoginComponent implements OnInit {
   }
 
   constructor(private loginTom:TomService,
-    private router:Router) { }
+    private router:Router,
+    private logger:NGXLogger) {
+      this.logger.debug('Inside LoginComponent Constructor.');
+     }
 
   ngOnInit() {
     this.option;
     this.options;
+    this.logger.debug('Inside ngOnInit in the LoginComponent.');
   }
 }
