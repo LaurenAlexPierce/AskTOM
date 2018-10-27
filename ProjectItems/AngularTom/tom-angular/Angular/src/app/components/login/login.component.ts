@@ -39,14 +39,14 @@ export class LoginComponent implements OnInit {
          */
         if(data != null){
           this.router.navigateByUrl('/home');
-          this.logger.debug('Data has been received in addTom().', data);
+          console.debug('Data has been received in addTom().', data);
         }
         else{
-          this.logger.trace('AddTom() returned null.');
+          console.trace('AddTom() returned null.');
         }
       },
       error => {
-        this.logger.trace('Error sending request.');
+        console.trace('Error sending request.');
         this.message = "Something went wrong. Please try again later.";
       }
     );
@@ -56,12 +56,12 @@ export class LoginComponent implements OnInit {
   constructor(private loginTom:TomService,
     private router:Router,
     private logger:NGXLogger) {
-      this.logger.debug('Inside LoginComponent Constructor.');
+      console.debug('Inside LoginComponent Constructor.');
      }
 
   ngOnInit() {
     this.option;
     this.options;
-    this.logger.debug('Inside ngOnInit in the LoginComponent.');
+    console.debug('Inside ngOnInit in the LoginComponent.');
   }
 }
