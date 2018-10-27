@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Topic } from './../home/topic/topic';
+import { TopicToResponseService } from './../../services/topic-to-response.service';
+import { Component, OnInit, Input } from '@angular/core';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { Response } from './response/response';
 
@@ -9,11 +11,18 @@ import { Response } from './response/response';
 })
 export class ResponseComponent implements OnInit {
 
-  responses:Response[]=[
-  ]
-  constructor() { }
+  topic: Topic;
+  responses:Response[]=[];
+
+  constructor( private data: TopicToResponseService) { }
 
   ngOnInit() {
+    this.data.currentTopic.subscribe(
+      data => {
+        // listen for changes to current topic
+        
+      }
+    )
   }
 
 }
