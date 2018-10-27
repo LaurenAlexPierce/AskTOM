@@ -1,29 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="5388" started-at="2018-10-26T19:44:00Z" finished-at="2018-10-26T19:44:05Z">
+  <suite name="Default suite" duration-ms="55821" started-at="2018-10-27T16:23:57Z" finished-at="2018-10-27T16:24:53Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="5388" started-at="2018-10-26T19:44:00Z" finished-at="2018-10-26T19:44:05Z">
-      <class name="com.revature.tests.PrivilegeDao_Test">
-        <test-method status="PASS" signature="getAllPrivilegesTest()[pri:0, instance:com.revature.tests.PrivilegeDao_Test@63440df3]" name="getAllPrivilegesTest" duration-ms="4558" started-at="2018-10-26T19:44:00Z" finished-at="2018-10-26T19:44:04Z">
+    <test name="Default test" duration-ms="55821" started-at="2018-10-27T16:23:57Z" finished-at="2018-10-27T16:24:53Z">
+      <class name="com.revature.tests.TopicDao_Test">
+        <test-method status="PASS" signature="testGetAllTopics()[pri:0, instance:com.revature.tests.TopicDao_Test@63440df3]" name="testGetAllTopics" duration-ms="55247" started-at="2018-10-27T16:23:57Z" finished-at="2018-10-27T16:24:53Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getAllPrivilegesTest -->
-        <test-method status="PASS" signature="insertPrivilegeTest()[pri:0, instance:com.revature.tests.PrivilegeDao_Test@63440df3]" name="insertPrivilegeTest" duration-ms="328" started-at="2018-10-26T19:44:04Z" finished-at="2018-10-26T19:44:04Z">
+        </test-method> <!-- testGetAllTopics -->
+        <test-method status="PASS" signature="testSelectTopic()[pri:0, instance:com.revature.tests.TopicDao_Test@63440df3]" name="testSelectTopic" duration-ms="43" started-at="2018-10-27T16:24:53Z" finished-at="2018-10-27T16:24:53Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- insertPrivilegeTest -->
-        <test-method status="PASS" signature="selectPrivilegeByIdTest()[pri:0, instance:com.revature.tests.PrivilegeDao_Test@63440df3]" name="selectPrivilegeByIdTest" duration-ms="44" started-at="2018-10-26T19:44:04Z" finished-at="2018-10-26T19:44:04Z">
+        </test-method> <!-- testSelectTopic -->
+        <test-method status="PASS" signature="testUpdateTopic()[pri:0, instance:com.revature.tests.TopicDao_Test@63440df3]" name="testUpdateTopic" duration-ms="510" started-at="2018-10-27T16:24:53Z" finished-at="2018-10-27T16:24:53Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- selectPrivilegeByIdTest -->
-        <test-method status="PASS" signature="updatePrivilegeTest()[pri:0, instance:com.revature.tests.PrivilegeDao_Test@63440df3]" name="updatePrivilegeTest" duration-ms="431" started-at="2018-10-26T19:44:04Z" finished-at="2018-10-26T19:44:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- updatePrivilegeTest -->
-      </class> <!-- com.revature.tests.PrivilegeDao_Test -->
+        </test-method> <!-- testUpdateTopic -->
+      </class> <!-- com.revature.tests.TopicDao_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
