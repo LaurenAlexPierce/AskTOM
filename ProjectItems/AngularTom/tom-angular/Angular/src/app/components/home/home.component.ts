@@ -68,6 +68,7 @@ export class HomeComponent implements OnInit {
         }
       }
     )
+    this.logOption="Login";
   }
 
   // Load 
