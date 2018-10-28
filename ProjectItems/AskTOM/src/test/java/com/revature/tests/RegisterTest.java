@@ -16,10 +16,13 @@ public class RegisterTest {
   public String url;
   ArrayList<WebElement> elements;
   
+  public RegisterTest() {
+	  driver = new HtmlUnitDriver(BrowserVersion.CHROME);
+	  url = "http://18.219.234.217:8085/AskTom";
+  }
+  
   @BeforeClass
   public void setup() {
-	  driver = new HtmlUnitDriver(BrowserVersion.CHROME);
-	  url = "http://18.219.234.217:8085/AskTom/register";
 	  driver.get(url);
   }
 
