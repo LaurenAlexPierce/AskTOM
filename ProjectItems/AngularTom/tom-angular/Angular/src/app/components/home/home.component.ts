@@ -59,7 +59,7 @@ export class HomeComponent implements OnInit {
     console.debug('contents of topicSelect: ' + topic.name);
     this.data.changeTopic(topic);
     console.warn('About to route to response');
-    this.router.navigateByUrl('/response');
+    this.router.navigateByUrl('/responses');
   }
 
   signedOn(){
