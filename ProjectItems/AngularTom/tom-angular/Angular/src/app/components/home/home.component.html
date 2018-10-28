@@ -15,21 +15,17 @@
     </div>
   </nav>
 <!-- NAVBAR END -->
-<div class="container-fluid">
-  <div class ="row">
+<div class="card-columns">
   <div *ngFor="let topic of topics">
       <div class="container" (click)="loadResponses(topic)">
           <div class=cardSection>
-            <div class="col-sm-4">
               <div class="card">
                <div class="card-body">{{topic.name}}</div>
               </div>
-            </div>
           </div>
       </div>
   </div>
-  </div>
-</div>
+ </div>
 
 
 <!-- NavBar with Nav Pills for cleanish looking navigation on the bottom of the page -->
