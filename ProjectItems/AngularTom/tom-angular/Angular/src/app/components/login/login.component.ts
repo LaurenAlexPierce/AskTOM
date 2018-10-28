@@ -1,3 +1,4 @@
+import { TokensService } from './../../services/tokens.service';
 import { ActiveTom } from './../tom/activeTom';
 import { NavbarComponent } from './../navbar/navbar.component';
 import { Component, OnInit, Output } from '@angular/core';
@@ -14,15 +15,17 @@ import { NGXLogger } from 'ngx-logger';
   providers:[NGXLogger]
 })
 export class LoginComponent implements OnInit {
+  
   message:string="";
   newTom:Tom = new Tom("","",2);
 
-  @Output() authenticatedUser:ActiveTom;
-
   option:Option={id:1,name:"true"};
+  // create options for menu.
   options:Option[]=[
     {id:1, name: "Info"}
   ];
+
+  // for returning 
 
   addTom(){
     new Tom(
@@ -41,6 +44,7 @@ export class LoginComponent implements OnInit {
          * logged-in user 
          */
         if(data != null){
+          this.authorizedTom.passTom(data);
           this.router.navigateByUrl('/home');
           console.debug('Data has been received in addTom().', data);
         }
@@ -53,10 +57,10 @@ export class LoginComponent implements OnInit {
         this.message = "Something went wrong. Please try again later.";
       }
     );
-
   }
 
   constructor(private loginTom:TomService,
+    private authorizedTom:TokensService,
     private router:Router,
     private logger:NGXLogger) {
       console.debug('Inside LoginComponent Constructor.');

@@ -6,11 +6,9 @@
     <ul class="navbar-nav ml-auto">
     </ul>
     <div class="row">
-        <div class="col-10"></div>
+      <div class="col-10"></div>
         <div class="col-2">
-          
-          <span><a routerLinkActive="active" routerLink="/login">Login</a> <a *ngIf="signedOn()">Logout</a></span>
-         
+          <span><a routerLinkActive="active" routerLink="/login" (click)="logout()">{{logOption}}</a></span>
         </div>
     </div>
   </nav>
@@ -27,4 +25,4 @@
 
 
 <!-- NavBar with Nav Pills for cleanish looking navigation on the bottom of the page -->
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom col-12">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom col-12"></nav>
