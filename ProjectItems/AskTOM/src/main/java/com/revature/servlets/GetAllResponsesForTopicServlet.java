@@ -8,20 +8,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.log4j.Logger;
-
 import com.revature.beans.Response;
 import com.revature.daos.ResponseDao;
 import com.revature.daos.ResponseDaoImpl;
 import com.revature.util.JSONUtil;
+import static com.revature.util.LoggingUtil.log;
 
 /**
  * Servlet implementation class GetAllResponsesForTopicServlet
  */
 public class GetAllResponsesForTopicServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    
-	Logger log = Logger.getRootLogger();
 	
     /**
      * @see HttpServlet#HttpServlet()
