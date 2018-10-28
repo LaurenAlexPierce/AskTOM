@@ -48,6 +48,4 @@ export class ResponseComponent implements OnInit {
       }
     )
   }
-
-
 }
