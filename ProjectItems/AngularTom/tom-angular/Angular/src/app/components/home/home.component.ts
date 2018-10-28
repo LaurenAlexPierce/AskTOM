@@ -32,10 +32,12 @@ export class HomeComponent implements OnInit {
       .getTopics()
       .subscribe(
         data => {
+          // get the topics. 
           console.log('In ngOnInit in home. Successful get topics.', data);
           this.topics = data;
         },
         error => {
+          // Log the error
           console.log(error.message);
         }
       );
@@ -62,5 +64,6 @@ export class HomeComponent implements OnInit {
 
   signedOn(){
     // this is where we handle the logout by invalidating the user from service.
+
   }
 }
