@@ -5,29 +5,19 @@
            AskTOM    </a>
       <ul class="navbar-nav ml-auto">
       </ul>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" 
-          role="button" 
-          data-toggle="dropdown" 
-          aria-haspopup="true" 
-          style="color:whitesmoke"
-          aria-expanded="false">
-          Menu
-        </a>
-        <div class="dropdown-menu" 
-          aria-labelledby="navbarDropdown">
-          <a class="dropdown-item"
-            ></a>
+      <div class="row">
+        <div class="col-10"></div>
+        <div class="col-2">
+          
+          <a routerLinkActive="active" routerLink="/home">Home</a> 
+         
         </div>
-      </li>
+    </div>
     </nav>
   <!-- NAVBAR END -->
   <!-- NavBar with Nav Pills for cleanish looking navigation on the bottom of the page -->
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom col-12">
 
-<p>
-  response works!
-</p>
 <div *ngFor="let response of responses">
     <div class="container">
         <div class="col-sm-2">{{response.votes}}</div>
