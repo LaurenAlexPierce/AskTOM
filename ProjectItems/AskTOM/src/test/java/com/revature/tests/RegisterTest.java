@@ -1,6 +1,9 @@
 //package com.revature.tests;
 //
+//import static org.testng.Assert.assertEquals;
+//
 //import java.util.ArrayList;
+//import java.util.concurrent.TimeUnit;
 //
 //import org.openqa.selenium.By;
 //import org.openqa.selenium.WebElement;
@@ -18,11 +21,13 @@
 //  
 //  public RegisterTest() {
 //	  driver = new HtmlUnitDriver(BrowserVersion.CHROME);
-//	  url = "http://18.219.234.217:8085/AskTom";
+//	  url = "http://18.219.234.217:8085/AskTOM";
 //  }
 //  
 //  @BeforeClass
 //  public void setup() {
+//	  driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+//	  //takes you to the home page
 //	  driver.get(url);
 //  }
 //
@@ -34,6 +39,15 @@
 //  
 //  @Test
 //  public void registerTom() {
+//	  //checks that we are on the home page
+//	  assertEquals(driver.getTitle(), "TomAngular");
+//	  
+//	  //navigates from home page to register page
+//	  driver.findElement(By.cssSelector("nav div.col-2 a")).click();
+//	  driver.findElement(By.cssSelector("nav a[routerlink=/register]")).click();
+//	  
+//	  
+//	  //utilizes home page
 //	  driver.findElement(By.name("register-username")).sendKeys("newUser");
 //	  driver.findElement(By.name("register-password")).sendKeys("newPassword");
 //	  driver.findElement(By.name("register-password-confirm")).sendKeys("newPassword");

@@ -107,3 +107,11 @@ html {
     margin: 10px;
     padding: 10px;
   }
+
+  .responseSection{
+    background: paleturquoise;
+    color: black;
+
+    border-radius: 5px;
+    border: 2px outset brown;
+  }
