@@ -7,8 +7,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.log4j.Logger;
-
 import com.revature.beans.Response;
 import com.revature.beans.Tom;
 import com.revature.beans.Topic;
@@ -19,14 +17,13 @@ import com.revature.daos.TomDaoImpl;
 import com.revature.daos.TopicDao;
 import com.revature.daos.TopicDaoImpl;
 import com.revature.util.JSONUtil;
+import static com.revature.util.LoggingUtil.log;
 
 /**
  * Servlet implementation class InsertResponseServlet
  */
 public class InsertResponseServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
-	Logger log = Logger.getRootLogger();
 	
     /**
      * @see HttpServlet#HttpServlet()

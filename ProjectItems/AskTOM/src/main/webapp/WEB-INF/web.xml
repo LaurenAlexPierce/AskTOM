@@ -69,4 +69,14 @@
     <servlet-name>InsertTopicServlet</servlet-name>
     <url-pattern>/InsertTopicServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UpvoteServlet</display-name>
+    <servlet-name>UpvoteServlet</servlet-name>
+    <servlet-class>com.revature.servlets.UpvoteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpvoteServlet</servlet-name>
+    <url-pattern>/UpvoteServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
