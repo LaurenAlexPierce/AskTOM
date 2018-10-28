@@ -30,6 +30,5 @@ export class RegisterTomService {
     body,
     {headers:headers});
   }
-
   
 }

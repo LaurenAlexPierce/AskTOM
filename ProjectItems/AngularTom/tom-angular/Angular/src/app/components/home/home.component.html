@@ -16,7 +16,7 @@
   </nav>
 <!-- NAVBAR END -->
 <div *ngFor="let topic of topics">
-    <div class="container" (click)="loadResponses()">
+    <div class="container" (click)="loadResponses(topic)">
         <div class=cardSection>
           <div class="card">
             <div class="card-body">{{topic.name}}</div>

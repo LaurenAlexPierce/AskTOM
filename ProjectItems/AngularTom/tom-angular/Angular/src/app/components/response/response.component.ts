@@ -14,15 +14,20 @@ export class ResponseComponent implements OnInit {
   topic: Topic;
   responses:Response[]=[];
 
-  constructor( private data: TopicToResponseService) { }
+  constructor( private data: TopicToResponseService,
+    private getResponsefromTopic: TopicToResponseService) { }
 
   ngOnInit() {
     this.data.currentTopic.subscribe(
       data => {
         // listen for changes to current topic
-        
+        this.topic = data;
+        if(this.topic != null){
+          
+        }
       }
     )
   }
+
 
 }
