@@ -56,7 +56,7 @@ export class HomeComponent implements OnInit {
   // Load 
   loadResponses(topic:Topic){
     console.trace('Entered load responses.');
-    console.debug('contents of topicSelect: ' + this.topicSelect.name);
+    console.debug('contents of topicSelect: ' + topic.name);
     this.data.changeTopic(this.topicSelect);
     console.warn('About to route to response');
     this.router.navigateByUrl('/response');
