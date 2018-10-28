@@ -15,15 +15,15 @@
     </div>
   </nav>
 <!-- NAVBAR END -->
-<div *ngFor="let topic of topics">
-    <div class="container" (click)="loadResponses()">
-        <div class=cardSection>
-          <div class="card">
-            <div class="card-body">{{topic.name}}</div>
+  <div class="container card-deck">
+    <div *ngFor="let topic of topics">
+        <div class="row cardSection" (click)="loadResponses(topic)">
+          <div class = "col-sm-3 card-body" >
+                 <p class="text center card-text"> {{topic.name}}</p>
           </div>
-        </div>
-     </div>
-</div>
+         </div>
+      </div>
+  </div>
 
 
 <!-- NavBar with Nav Pills for cleanish looking navigation on the bottom of the page -->

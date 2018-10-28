@@ -32,10 +32,12 @@ export class HomeComponent implements OnInit {
       .getTopics()
       .subscribe(
         data => {
+          // get the topics. 
           console.log('In ngOnInit in home. Successful get topics.', data);
           this.topics = data;
         },
         error => {
+          // Log the error
           console.log(error.message);
         }
       );
@@ -52,15 +54,17 @@ export class HomeComponent implements OnInit {
   }
 
   // Load 
-  loadResponses(){
+  loadResponses(topic:Topic){
     console.trace('Entered load responses.');
-    console.debug('contents of topicSelect: ' + this.topicSelect.name);
-    this.data.changeTopic(this.topicSelect);
+    console.debug('contents of topicSelect: ' + topic.name);
+    this.data.changeTopic(topic);
     console.warn('About to route to response');
-    this.router.navigateByUrl('/response');
+    this.router.navigateByUrl('/responses');
   }
 
   signedOn(){
     // this is where we handle the logout by invalidating the user from service.
+
   }
 }
+

@@ -9,20 +9,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.log4j.Logger;
-
 import com.revature.beans.Tom;
 import com.revature.daos.TomDao;
 import com.revature.daos.TomDaoImpl;
 import com.revature.util.JSONUtil;
+import static com.revature.util.LoggingUtil.log;
 
 /**
  * Servlet implementation class LoginServlet
  */
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
-	Logger log = Logger.getRootLogger();
        
     /**
      * @see HttpServlet#HttpServlet()

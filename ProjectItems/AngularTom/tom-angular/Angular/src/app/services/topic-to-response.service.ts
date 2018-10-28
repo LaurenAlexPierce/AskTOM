@@ -15,8 +15,9 @@ export class TopicToResponseService {
   constructor() { }
 
   changeTopic(topic:Topic){
-    this.topic=topic;
-    this.topicToComponent.next(this.topic);
+    console.debug('Topic name in changeTopic: ',topic.id, ', ',topic.name, ', ', topic.privId);
+    console.warn('Calling topicToComponent.next.');
+    this.topicToComponent.next(topic);
   }
 
 }
